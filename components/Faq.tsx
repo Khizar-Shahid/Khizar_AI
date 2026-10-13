@@ -2,13 +2,11 @@ import { ArrowRight } from "./Icons";
 import { SITE } from "./site";
 
 const faqs = [
-  ["Is this just GoHighLevel?", "It runs on HighLevel, yes. You could buy HighLevel and build it yourself. Most agents and loan officers don't have the weeks it takes. You get it set up for your business, with campaigns written for real estate or mortgage, texting rules handled, and ongoing support."],
   ["Do I have to leave Follow Up Boss?", "Not necessarily. If you're happy with Follow Up Boss, it can connect to this CRM so you keep it and add the follow-up you're missing. If you're paying for it and not using it, moving over may save you money. We'll work out which on the fit call."],
   ["Does it work with my loan software?", "Arive on the Pro plan connects, so loan milestones can send texts automatically. Encompass doesn't offer a direct connection we can use, so past clients come over by export and milestone updates are sent from the pipeline instead."],
   ["Are the texts legal?", "Every form includes consent wording, every message honours STOP, and your number goes through carrier registration before marketing texts go out. This isn't legal advice, so please run the consent wording past your broker or compliance person."],
   ["Will messages sound like a robot?", "No. We write them together on a call, in your words. The system makes sure they go out on time. It doesn't pretend to be you in long conversations."],
   ["What if I want to leave?", "Give 30 days' notice after any minimum term. Your contacts are yours, and I'll export them for you."],
-  ["You're in Pakistan. Will support be on my time?", "Yes. I work US business hours, and support messages get a same-business-day reply."],
 ];
 
 export default function Faq() {
