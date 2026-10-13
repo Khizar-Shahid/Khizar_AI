@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import FactsStrip from "@/components/FactsStrip";
 import Marquee from "@/components/Marquee";
 import Numbers from "@/components/Numbers";
 import Problem from "@/components/Problem";
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <main id="top">
         <Hero />
+        <FactsStrip />
         <Marquee />
         <Numbers />
         <Problem />

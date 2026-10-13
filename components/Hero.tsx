@@ -23,25 +23,17 @@ const columns = [
   },
 ];
 
-const facts = [
-  ["~10 days", "From fit call to a live account"],
-  ["~1 min", "Missed-call text-back, while you're with a client"],
-  ["Monthly", "No long contract, contacts yours to export"],
-  ["1 person", "Sets it up and answers your support messages"],
-];
-
 export default function Hero() {
   return (
     <section className="band hero" aria-labelledby="h1">
       <div className="wrap">
-        <div className="hero-head">
-          <p className="pill"><i />CRM for real estate agents &amp; loan officers</p>
-          <h1 id="h1">
-            Every lead answered. <em>Every past client remembered.</em>
-          </h1>
-        </div>
         <div className="hero-grid">
           <div className="hero-copy">
+            <p className="pill"><i />CRM for real estate agents &amp; loan officers</p>
+            <h1 id="h1">
+              Every lead answered.<br />
+              <em>Every past client remembered.</em>
+            </h1>
             <p className="lede">
               One CRM for texting, calls, booking, follow-up and past clients, set up for you from day one and
               written in your voice. Month to month, and supported by the person who set it up.
@@ -110,12 +102,6 @@ export default function Hero() {
               <div><b>Showing booked</b><span>Thu 5:30 pm · reminder set</span></div>
             </div>
           </div>
-        </div>
-
-        <div className="strip">
-          {facts.map(([big, small]) => (
-            <div key={big}><b>{big}</b><span>{small}</span></div>
-          ))}
         </div>
       </div>
     </section>

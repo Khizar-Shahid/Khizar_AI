@@ -62,23 +62,19 @@ The color palette pairs deep teal and near-black with a muted olive accent and a
 
 ## 4. Typography
 
-The typography system balances expressive, technical headlines with crisp, functional reading copy.
+The typography system combines an editorial serif for headings with a contemporary, highly legible grotesque for all other text. Both fonts are served from Google Fonts via Next.js (`next/font/google`) with exactly 1 fallback font.
 
-### 4.1 Primary Typeface: Space Grotesk
-- **Role:** Headings, Display text, and Wordmark.
-- **Purpose:** Infuses distinctive technical character and geometry into main headlines and branding elements.
-- **Character Set:**
-  - `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
-  - `abcdefghijklmnopqrstuvwxyz`
-  - `0123456789!@#$%`
+### 4.1 Headings & Display Typeface: Playfair Display
+- **Role:** Headings (`h1`–`h4`), display numbers, emphasized brand statements, and wordmarks.
+- **Provider:** Google Fonts via `next/font/google` (`Playfair_Display`).
+- **Fallback:** `serif` (single fallback).
+- **Purpose:** Adds an elegant, authoritative, editorial presence to headings and hero statements.
 
-### 4.2 Secondary Typeface: Instrument Sans
-- **Role:** Body copy, labels, captions, UI components, and long-form reading.
-- **Purpose:** Delivers high legibility and balanced proportions in extended text.
-- **Character Set:**
-  - `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
-  - `abcdefghijklmnopqrstuvwxyz`
-  - `0123456789!@#$%`
+### 4.2 Body & General Text Typeface: Schibsted Grotesk
+- **Role:** All other text—including body copy, paragraphs, buttons, navigation links, UI badges, labels, and forms.
+- **Provider:** Google Fonts via `next/font/google` (`Schibsted_Grotesk`).
+- **Fallback:** `sans-serif` (single fallback).
+- **Purpose:** Delivers modern Scandinavian grotesque clarity, high legibility across screens, and clean UI aesthetics.
 
 ---
 
@@ -110,8 +106,8 @@ The typography system balances expressive, technical headlines with crisp, funct
   --color-onyx: #0A1511;
   --color-mint-cream: #EAF0EC;
 
-  /* Typography */
-  --font-primary: 'Space Grotesk', sans-serif;
-  --font-secondary: 'Instrument Sans', sans-serif;
+  /* Typography (Google Fonts via next/font/google with single fallback) */
+  --display: var(--font-display), serif;
+  --body: var(--font-body), sans-serif;
 }
 ```
