@@ -7,14 +7,14 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div>
-            <a className="mark" href="#top" aria-label="khizar.ai home"><Logo />khizar.ai</a>
+            <a className="mark" href="/" aria-label="khizar.ai home"><Logo />khizar.ai</a>
             <p>A CRM set up for you, for real estate agents and mortgage loan officers in the US and Canada.</p>
           </div>
           <nav className="foot-nav" aria-label="Footer">
-            <a href="#inside">What&apos;s inside</a>
-            <a href="#how">How it works</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
+            <a href="/#inside">What&apos;s inside</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </nav>
         </div>

@@ -6,13 +6,13 @@ import { Cross, Menu } from "./Icons";
 import { SITE } from "./site";
 
 const links = [
-  ["#inside", "What's inside"],
-  ["#how", "How it works"],
-  ["#pricing", "Pricing"],
-  ["#faq", "FAQ"],
+  ["/#inside", "What's inside"],
+  ["/#how", "How it works"],
+  ["/#pricing", "Pricing"],
+  ["/#faq", "FAQ"],
 ];
 
-export default function Header() {
+export default function Header({ theme }: { theme?: "light" | "dark" }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,9 +26,9 @@ export default function Header() {
   const close = () => setOpen(false);
 
   return (
-    <header className={`top${scrolled ? " scrolled" : ""}${open ? " open" : ""}`}>
+    <header className={`top${theme === "dark" ? " header-dark" : ""}${scrolled ? " scrolled" : ""}${open ? " open" : ""}`}>
       <div className="topin">
-        <a className="mark" href="#top" aria-label="khizar.ai home" onClick={close}>
+        <a className="mark" href="/" aria-label="khizar.ai home" onClick={close}>
           <Logo />
           khizar.ai
         </a>

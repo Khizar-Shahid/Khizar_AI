@@ -288,6 +288,38 @@ header.top:not(.scrolled):not(.open) .topnav a:not(.btn):hover {
   background: rgba(10, 21, 17, .06);
 }
 
+/* header on dark pages (like /confirmation) */
+header.top.header-dark:not(.scrolled):not(.open),
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) {
+  --fg: #EAF0EC;
+  --fg-dim: #A6B8B1;
+  color: #EAF0EC;
+  --btn-bg: var(--citron);
+  --btn-ink: var(--forest);
+}
+
+header.top.header-dark:not(.scrolled):not(.open) .mark,
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .mark {
+  color: #EAF0EC;
+}
+
+header.top.header-dark:not(.scrolled):not(.open) .mark svg,
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .mark svg {
+  color: var(--citron);
+}
+
+header.top.header-dark:not(.scrolled):not(.open) .topnav a:not(.btn),
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav a:not(.btn) {
+  color: #C2D1CB;
+  font-weight: 500;
+}
+
+header.top.header-dark:not(.scrolled):not(.open) .topnav a:not(.btn):hover,
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav a:not(.btn):hover {
+  color: #FFFFFF;
+  background: rgba(234, 240, 236, .08);
+}
+
 header.top.scrolled,
 header.top.open {
   color: #EAF0EC;
@@ -2329,6 +2361,263 @@ html[data-reveal] [data-r] {
 html[data-reveal] [data-r].in {
   opacity: 1;
   transform: none
+}
+
+/* confirmation page */
+.confirmation-band {
+  min-height: calc(100vh - 80px);
+  padding-top: clamp(120px, 13vw, 150px);
+  padding-bottom: clamp(72px, 8vw, 110px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.confirmation-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(55% 70% at 85% 15%, rgba(214, 220, 92, .18), transparent 70%),
+    radial-gradient(45% 60% at 10% 85%, rgba(28, 61, 54, .85), transparent 70%);
+}
+
+.confirmation-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 64px);
+  align-items: start;
+}
+
+.confirmation-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--citron) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--citron) 35%, transparent);
+  color: var(--citron);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+
+.status-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.confirmation-head h1 {
+  font-size: clamp(38px, 5.2vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.confirmation-head .lede {
+  color: var(--fg-dim);
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.55;
+  max-width: 54ch;
+}
+
+.confirmation-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.step-card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 22px 24px;
+  align-items: start;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.step-card:hover {
+  border-color: color-mix(in srgb, var(--citron) 35%, var(--line));
+  transform: translateY(-2px);
+}
+
+.step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--citron) 18%, transparent);
+  color: var(--citron);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--citron) 30%, transparent);
+}
+
+.step-info h3 {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 17.5px;
+  color: var(--fg);
+  margin-bottom: 6px;
+}
+
+.step-info p {
+  color: var(--fg-dim);
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.confirmation-summary-card {
+  background: var(--paper);
+  color: var(--forest);
+  border-radius: calc(var(--radius) + 4px);
+  padding: clamp(26px, 3.5vw, 38px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .8);
+  position: sticky;
+  top: 100px;
+}
+
+.summary-card-header {
+  border-bottom: 1px solid #DAD6C6;
+  padding-bottom: 18px;
+}
+
+.summary-card-header .card-tag {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #6B7F78;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.summary-card-header h3 {
+  font-size: clamp(24px, 2.8vw, 30px);
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.summary-card-header p {
+  color: #3F5A53;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.detail-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--forest) 8%, transparent);
+  color: var(--forest);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.detail-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.detail-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.detail-text span {
+  font-size: 14px;
+  color: #3F5A53;
+  line-height: 1.45;
+}
+
+.summary-tip {
+  background: #EAE7DA;
+  border-radius: 12px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--forest);
+}
+
+.summary-tip h4 {
+  font-size: 13px;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--forest);
+  margin-bottom: 4px;
+}
+
+.summary-tip p {
+  font-size: 14px;
+  color: #3F5A53;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.summary-footer {
+  border-top: 1px solid #DAD6C6;
+  padding-top: 16px;
+  font-size: 14px;
+  color: #6B7F78;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-footer a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .confirmation-grid {
+    grid-template-columns: 1fr;
+  }
+  .confirmation-summary-card {
+    position: static;
+  }
 }
 
 @media (prefers-reduced-motion:no-preference) {
