@@ -1,19 +1,127 @@
-export default function Logo({ className }: { className?: string }) {
+import type React from "react";
+import Image from "next/image";
+
+interface LogoProps {
+  variant?: "full" | "mark";
+  mode?: "light" | "dark" | "auto";
+  className?: string;
+  height?: number;
+  width?: number;
+  size?: number;
+  style?: React.CSSProperties;
+}
+
+export default function Logo({
+  variant = "full",
+  mode = "auto",
+  className,
+  height,
+  width,
+  size,
+  style,
+}: LogoProps) {
+  if (variant === "mark") {
+    const dim = size || height || 28;
+    return (
+      <Image
+        src="/assets/favicon.svg"
+        alt="Realtor-Go"
+        width={dim}
+        height={dim}
+        className={className}
+        style={{
+          width: `${dim}px`,
+          height: `${dim}px`,
+          flexShrink: 0,
+          ...style,
+        }}
+        priority
+      />
+    );
+  }
+
+  // Full Horizontal Logo
+  const h = height || size || 42;
+  const w = width || Math.round(h * 3.8);
+
+  if (mode === "dark") {
+    return (
+      <Image
+        src="/assets/logo_dark.svg"
+        alt="Realtor-Go"
+        width={w}
+        height={h}
+        className={className}
+        style={{
+          height: `${h}px`,
+          width: "auto",
+          flexShrink: 0,
+          display: "block",
+          ...style,
+        }}
+        priority
+      />
+    );
+  }
+
+  if (mode === "light") {
+    return (
+      <Image
+        src="/assets/logo_light.svg"
+        alt="Realtor-Go"
+        width={w}
+        height={h}
+        className={className}
+        style={{
+          height: `${h}px`,
+          width: "auto",
+          flexShrink: 0,
+          display: "block",
+          ...style,
+        }}
+        priority
+      />
+    );
+  }
+
+  // "auto": renders the light asset by default, and dark asset when in dark/scrolled contexts via CSS
   return (
-    <svg
-      viewBox="0 0 48 48"
-      width="28"
-      height="28"
-      aria-hidden="true"
-      fill="currentColor"
-      className={className}
-      style={{ width: "28px", height: "28px", flexShrink: 0 }}
+    <span
+      className={`logo-img-wrap ${className || ""}`}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        lineHeight: 1,
+        flexShrink: 0,
+        ...style,
+      }}
     >
-      <path d="M14 8l9 11-3 5-9-11z" />
-      <path d="M34 8l-9 11 3 5 9-11z" />
-      <path d="M14 40l9-11-3-5-9 11z" />
-      <path d="M34 40l-9-11 3-5 9 11z" />
-      <rect x="21.5" y="18" width="5" height="12" rx="2.5" />
-    </svg>
+      <Image
+        src="/assets/logo_light.svg"
+        alt="Realtor-Go"
+        width={w}
+        height={h}
+        className="logo-img-light"
+        style={{
+          height: `${h}px`,
+          width: "auto",
+          display: "block",
+        }}
+        priority
+      />
+      <Image
+        src="/assets/logo_dark.svg"
+        alt="Realtor-Go"
+        width={w}
+        height={h}
+        className="logo-img-dark"
+        style={{
+          height: `${h}px`,
+          width: "auto",
+          display: "none",
+        }}
+        priority
+      />
+    </span>
   );
 }

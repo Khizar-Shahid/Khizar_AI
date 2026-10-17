@@ -2,7 +2,7 @@ import type React from "react";
 
 // Edit these in one place.
 export const SITE = {
-  email: "hello@khizar.ai", // TODO: replace with your real address
+  email: "hello@realtor-go.com", // TODO: replace with your real address
   bookingUrl: "#start", // TODO: replace with your booking link (e.g. your GHL calendar)
   confirmationUrl: "/confirmation",
   sources: {

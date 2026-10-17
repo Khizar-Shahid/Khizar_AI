@@ -7,10 +7,11 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div>
-            <a className="mark" href="/" aria-label="khizar.ai home"><Logo />khizar.ai</a>
+            <a className="mark" href="/" aria-label="Realtor-Go home"><Logo height={46} /></a>
             <p>A CRM set up for you, for real estate agents and mortgage loan officers in the US and Canada.</p>
           </div>
           <nav className="foot-nav" aria-label="Footer">
+            <a href="/services/">Services</a>
             <a href="/#inside">What&apos;s inside</a>
             <a href="/#how">How it works</a>
             <a href="/#pricing">Pricing</a>
@@ -19,7 +20,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="foot-fine">
-          <span>© {new Date().getFullYear()} khizar.ai. Runs on HighLevel. Not affiliated with HighLevel, NAR, ICE or any CRM named on this page.</span>
+          <span>© {new Date().getFullYear()} Realtor-Go. Runs on HighLevel. Not affiliated with HighLevel, NAR, ICE or any CRM named on this page.</span>
           <span>
             Figures: NAR buyer and seller data via{" "}
             <a href={SITE.sources.nar} target="_blank" rel="noopener noreferrer">Real Estate News</a> (2023); ICE

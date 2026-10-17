@@ -6,7 +6,7 @@ import { ArrowRight, Calendar, Check, Inbox, Shield } from "@/components/Icons";
 import { SITE, delay } from "@/components/site";
 
 export const metadata: Metadata = {
-  title: "Call Scheduled & Confirmed | khizar.ai",
+  title: "Call Scheduled & Confirmed | Realtor-Go",
   description:
     "Your 20-minute fit call is confirmed. A calendar invitation with the meeting details has been sent to your inbox.",
   robots: {
@@ -94,7 +94,7 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                     <div className="step-info">
                       <h3>Zero pressure or hard sell</h3>
                       <p>
-                        If khizar.ai is a genuine match, we will show you setup and migration timelines. If another tool fits your current stage better, we will tell you honestly.
+                        If Realtor-Go is a genuine match, we will show you setup and migration timelines. If another tool fits your current stage better, we will tell you honestly.
                       </p>
                     </div>
                   </div>

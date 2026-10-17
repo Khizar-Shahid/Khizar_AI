@@ -19,7 +19,9 @@ function Icon({ children }: { children: ReactNode }) {
 export const ArrowRight = () => <Icon><path d="M5 12h14M13 6l6 6-6 6" /></Icon>;
 export const Check = () => <Icon><path d="M5 12.5l4.5 4.5L19 7.5" /></Icon>;
 export const Cross = () => <Icon><path d="M6 6l12 12M18 6L6 18" /></Icon>;
+export const Plus = () => <Icon><path d="M12 5v14M5 12h14" /></Icon>;
 export const Minus = () => <Icon><path d="M6 12h12" /></Icon>;
+export const ChevronDown = () => <Icon><path d="M6 9l6 6 6-6" /></Icon>;
 export const Menu = () => <Icon><path d="M4 7h16M4 12h16M4 17h16" /></Icon>;
 export const Inbox = () => <Icon><path d="M3 13l3-8h12l3 8v6H3z" /><path d="M3 13h5l1.5 3h5L16 13h5" /></Icon>;
 export const PhoneMissed = () => (

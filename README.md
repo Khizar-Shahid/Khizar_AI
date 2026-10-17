@@ -1,6 +1,6 @@
-# khizar.ai website (Next.js)
+# Realtor-Go website (Next.js)
 
-Landing page for the khizar.ai CRM for real estate agents and mortgage loan officers.
+Landing page for the Realtor-Go CRM for real estate agents and mortgage loan officers.
 Next.js 14 (App Router) + TypeScript. No other dependencies.
 
 ## Run it locally
@@ -21,7 +21,7 @@ Next.js 14 (App Router) + TypeScript. No other dependencies.
 
 1. Push this folder to a GitHub repo.
 2. In Vercel: Add New → Project → import the repo. Framework is detected as Next.js; no settings needed.
-3. Add your domain (khizar.ai) under Project → Settings → Domains.
+3. Add your domain (realtor-go.com) under Project → Settings → Domains.
 
 ## Structure
 

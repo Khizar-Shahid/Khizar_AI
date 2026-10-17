@@ -13,7 +13,7 @@ export default function About() {
       <div className="wrap">
         <div className="about">
           <div className="about-card" data-r>
-            <div className="mono-k" aria-hidden="true"><Logo /></div>
+            <div className="mono-k" aria-hidden="true"><Logo variant="mark" size={46} /></div>
             <h3>Khizar Shahid<small>Sets up your account</small></h3>
             <dl className="facts">
               {facts.map(([k, v]) => (

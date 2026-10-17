@@ -6,11 +6,19 @@ const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display
 const body = Schibsted_Grotesk({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "khizar.ai | CRM for real estate agents & loan officers",
+  title: "Realtor-Go | CRM for Real Estate Agents & Loan Officers",
   description:
     "A CRM set up for you from day one: texting, booking, follow-up and past-client campaigns for real estate agents and mortgage loan officers. Month to month.",
   verification: {
     google: "1C87TjVPAR3nS_72K6KDCLzBKuSDXl9NRSbD3cOF0AA",
+  },
+  icons: {
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+    ],
   },
 };
 

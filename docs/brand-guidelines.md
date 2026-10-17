@@ -1,20 +1,20 @@
-# KHIZAR.AI Brand Guidelines (2026)
+# Realtor-Go Brand Guidelines (2026)
 
-Comprehensive brand identity and design system specifications for **KHIZAR.AI**.
+Comprehensive brand identity and design system specifications for **Realtor-Go**.
 
 ---
 
 ## 1. Brand Overview
 
-KHIZAR.AI pairs deep technical precision with a calm, modern identity. The brand system is built around high-contrast minimalism, purposeful typography, and a distinct geometric mark.
+Realtor-Go pairs deep technical precision with a calm, modern identity. The brand system is built around high-contrast minimalism, purposeful typography, and a distinct geometric mark.
 
 ---
 
 ## 2. Logo System
 
 ### 2.1 Main Logo
-The **khizar.ai** logo combines a custom letterform with a radiating geometric mark. The symbol reads as a "K" from multiple angles, giving it a distinct, ownable identity that remains recognizable at any size.
-- **Primary Lockup:** Horizontal lockup containing the icon mark alongside the uppercase `KHIZAR.AI` wordmark.
+The **Realtor-Go** logo combines a custom letterform with a radiating geometric mark. The symbol reads as a "K" / compass star from multiple angles, giving it a distinct, ownable identity that remains recognizable at any size.
+- **Primary Lockup:** Horizontal lockup containing the icon mark alongside the `Realtor Go` wordmark.
 - **Usage:** This is the primary brand lockup and should be used wherever space allows.
 
 ### 2.2 Logo Variations
@@ -22,8 +22,8 @@ Three lockups are provided to accommodate all layouts:
 
 | Variation | Layout Description | Recommended Usage |
 | :--- | :--- | :--- |
-| **Horizontal Logo** | Symbol to the left of `KHIZAR.AI` wordmark | Headers, navigation bars, and wide horizontal layouts |
-| **Vertical Logo** | Symbol centered above `KHIZAR.AI` wordmark | Centered layouts, square cards, and splash screens |
+| **Horizontal Logo** | Symbol to the left of `Realtor Go` wordmark | Headers, navigation bars, and wide horizontal layouts |
+| **Vertical Logo** | Symbol centered above `Realtor Go` wordmark | Centered layouts, square cards, and splash screens |
 | **Logo Symbol** | Standalone radiating geometric mark | Favicons, app icons, browser tabs, and profile avatars |
 
 ### 2.3 Safe Zone & Clear Space
