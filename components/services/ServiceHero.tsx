@@ -24,7 +24,7 @@ export default function ServiceHero({
       <div className="wrap">
         <Breadcrumbs
           items={[
-            { label: "Services", href: "/services/" },
+            { label: "Services", href: "/services" },
             ...(breadcrumbLabel ? [{ label: breadcrumbLabel }] : []),
           ]}
         />
@@ -51,7 +51,7 @@ export default function ServiceHero({
 
           <div data-r style={delay(3)} className="cta-row">
             <a className="btn btn-primary" href={SITE.bookingUrl}>
-              Book a 20-minute fit call <ArrowRight />
+              Book a Free Strategy Call <ArrowRight />
             </a>
             <a className="btn btn-ghost" href="#deliverables">
               Explore what we build

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Call Scheduled & Confirmed | Realtor-Go",
   description:
     "Your 20-minute fit call is confirmed. A calendar invitation with the meeting details has been sent to your inbox.",
+  alternates: {
+    canonical: "/confirmation",
+  },
   robots: {
     index: false,
     follow: false,

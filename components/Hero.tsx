@@ -39,7 +39,7 @@ export default function Hero() {
               written in your voice. Month to month, and supported by the person who set it up.
             </p>
             <div className="cta-row">
-              <a className="btn btn-primary" href={SITE.bookingUrl}>Book a 20-minute fit call <ArrowRight /></a>
+              <a className="btn btn-primary" href={SITE.bookingUrl}>Book a Free Strategy Call <ArrowRight /></a>
               <a className="btn btn-ghost" href="#inside">See what&apos;s inside</a>
             </div>
             <p className="fine">

@@ -11,17 +11,22 @@ const serviceCategories = [
     category: "CRM Setup",
     items: [
       {
-        href: "/services/real-estate-crm-setup/",
+        href: "/services/real-estate-crm-setup",
         label: "Real Estate CRM Setup",
         desc: "Agents, teams and brokerages",
       },
       {
-        href: "/services/mortgage-crm-setup/",
+        href: "/services/mortgage-crm-setup",
         label: "Mortgage CRM Setup",
         desc: "Brokers and loan officers",
       },
       {
-        href: "/services/gohighlevel-real-estate-crm-setup/",
+        href: "/services/mortgage-loan-officer-crm",
+        label: "Loan Officer CRM",
+        desc: "Borrower pipelines & speed-to-lead",
+      },
+      {
+        href: "/services/gohighlevel-real-estate-crm-setup",
         label: "GoHighLevel Real Estate CRM",
         desc: "Turnkey GHL snapshot & build",
       },
@@ -31,22 +36,22 @@ const serviceCategories = [
     category: "Automations",
     items: [
       {
-        href: "/services/crm-workflow-automation/",
+        href: "/services/crm-workflow-automation",
         label: "CRM Workflow Automation",
         desc: "Routing, reminders & triggers",
       },
       {
-        href: "/services/real-estate-lead-follow-up-automation/",
+        href: "/services/real-estate-lead-follow-up-automation",
         label: "Real Estate Follow-Up",
         desc: "Speed-to-lead & 365-day nurture",
       },
       {
-        href: "/services/mortgage-lead-follow-up-automation/",
+        href: "/services/mortgage-lead-follow-up-automation",
         label: "Mortgage Follow-Up",
         desc: "1003 recovery & borrower updates",
       },
       {
-        href: "/services/real-estate-marketing-automation/",
+        href: "/services/real-estate-marketing-automation",
         label: "Marketing Automation",
         desc: "Funnels, newsletters & ads sync",
       },
@@ -56,7 +61,7 @@ const serviceCategories = [
     category: "Migrations",
     items: [
       {
-        href: "/services/crm-migration-services/",
+        href: "/services/crm-migration-services",
         label: "CRM Migration Services",
         desc: "Zero-loss data & field mapping",
       },
@@ -153,7 +158,7 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
             onMouseLeave={handleMouseLeave}
           >
             <div className="nav-dropdown-trigger-row">
-              <a href="/services/" className="nav-dropdown-link" onClick={closeAll}>
+              <a href="/services" className="nav-dropdown-link" onClick={closeAll}>
                 Services
               </a>
               <button
@@ -172,7 +177,7 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
 
             <div className={`nav-dropdown-menu${servicesOpen ? " show" : ""}`}>
               <div className="nav-dropdown-header">
-                <a href="/services/" className="nav-dropdown-hub-link" onClick={closeAll}>
+                <a href="/services" className="nav-dropdown-hub-link" onClick={closeAll}>
                   <span>Explore all services overview</span>
                   <span className="hub-arrow" aria-hidden="true">→</span>
                 </a>

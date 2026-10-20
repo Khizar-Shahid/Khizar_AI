@@ -40,11 +40,11 @@ export default function ServicesGrid({
                 <span className="service-kw-tag">{service.primaryKeyword}</span>
               </div>
               <h3 className="service-card-title">
-                <Link href={`/services/${service.slug}/`}>{service.h1}</Link>
+                <Link href={`/services/${service.slug}`}>{service.h1}</Link>
               </h3>
               <p className="service-card-desc">{service.metaDescription}</p>
               <div className="service-card-footer">
-                <Link href={`/services/${service.slug}/`} className="service-link-btn">
+                <Link href={`/services/${service.slug}`} className="service-link-btn">
                   <span>View service details</span>
                   <ArrowRight />
                 </Link>

@@ -41,7 +41,7 @@ export interface ServiceItem {
 export const BASE_URL = "https://www.realtor-go.com";
 
 export const SERVICES_HUB_DATA = {
-  url: `${BASE_URL}/services/`,
+  url: `${BASE_URL}/services`,
   primaryKeyword: "GoHighLevel CRM Setup",
   title: "GoHighLevel CRM Setup Services Across the USA | Realtor-Go",
   h1: "GoHighLevel CRM Setup & Automation Services for Real Estate and Mortgage Businesses",
@@ -60,7 +60,7 @@ export const SERVICES_HUB_DATA = {
 export const SERVICES_LIST: ServiceItem[] = [
   {
     slug: "real-estate-crm-setup",
-    url: `${BASE_URL}/services/real-estate-crm-setup/`,
+    url: `${BASE_URL}/services/real-estate-crm-setup`,
     primaryKeyword: "Real Estate CRM Setup",
     title: "Real Estate CRM Setup Services Across the USA | Realtor-Go",
     h1: "Real Estate CRM Setup for Agents, Teams and Brokerages",
@@ -153,7 +153,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "mortgage-crm-setup",
-    url: `${BASE_URL}/services/mortgage-crm-setup/`,
+    url: `${BASE_URL}/services/mortgage-crm-setup`,
     primaryKeyword: "Mortgage CRM Setup",
     title: "Mortgage CRM Setup Services Across the USA | Realtor-Go",
     h1: "Mortgage CRM Setup for Brokers and Loan Officers",
@@ -246,7 +246,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "crm-workflow-automation",
-    url: `${BASE_URL}/services/crm-workflow-automation/`,
+    url: `${BASE_URL}/services/crm-workflow-automation`,
     primaryKeyword: "CRM Workflow Automation",
     title: "CRM Workflow Automation Services Across the USA | Realtor-Go",
     h1: "CRM Workflow Automation for Real Estate and Mortgage Businesses",
@@ -339,7 +339,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "real-estate-lead-follow-up-automation",
-    url: `${BASE_URL}/services/real-estate-lead-follow-up-automation/`,
+    url: `${BASE_URL}/services/real-estate-lead-follow-up-automation`,
     primaryKeyword: "Real Estate Lead Follow-Up Automation",
     title: "Real Estate Lead Follow-Up Automation | Realtor-Go USA",
     h1: "Real Estate Lead Follow-Up Automation for Agents and Teams",
@@ -432,7 +432,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "mortgage-lead-follow-up-automation",
-    url: `${BASE_URL}/services/mortgage-lead-follow-up-automation/`,
+    url: `${BASE_URL}/services/mortgage-lead-follow-up-automation`,
     primaryKeyword: "Mortgage Lead Follow-Up Automation",
     title: "Mortgage Lead Follow-Up Automation | Realtor-Go USA",
     h1: "Mortgage Lead Follow-Up Automation for Brokers and Loan Officers",
@@ -525,7 +525,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "real-estate-marketing-automation",
-    url: `${BASE_URL}/services/real-estate-marketing-automation/`,
+    url: `${BASE_URL}/services/real-estate-marketing-automation`,
     primaryKeyword: "Real Estate Marketing Automation",
     title: "Real Estate Marketing Automation Services the USA | Realtor-Go",
     h1: "Real Estate Marketing Automation for Agents and Brokerages",
@@ -618,7 +618,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "crm-migration-services",
-    url: `${BASE_URL}/services/crm-migration-services/`,
+    url: `${BASE_URL}/services/crm-migration-services`,
     primaryKeyword: "CRM Migration Services",
     title: "CRM Migration Services for Real Estate & Mortgage | Realtor-Go",
     h1: "CRM Migration Services for Real Estate and Mortgage Businesses",
@@ -711,7 +711,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     slug: "gohighlevel-real-estate-crm-setup",
-    url: `${BASE_URL}/services/gohighlevel-real-estate-crm-setup/`,
+    url: `${BASE_URL}/services/gohighlevel-real-estate-crm-setup`,
     primaryKeyword: "GoHighLevel Real Estate CRM Setup",
     title: "GoHighLevel Real Estate CRM Setup the USA | Realtor-Go",
     h1: "GoHighLevel Real Estate CRM Setup for Agents and Teams",
@@ -801,6 +801,99 @@ export const SERVICES_LIST: ServiceItem[] = [
       },
     ],
     relatedSlugs: ["real-estate-crm-setup", "real-estate-lead-follow-up-automation", "crm-migration-services"],
+  },
+  {
+    slug: "mortgage-loan-officer-crm",
+    url: `${BASE_URL}/services/mortgage-loan-officer-crm`,
+    primaryKeyword: "Mortgage Loan Officer CRM",
+    title: "Mortgage Loan Officer CRM | Realtor-Go",
+    h1: "Mortgage Loan Officer CRM to Manage Leads and Grow Your Business",
+    metaDescription:
+      "Manage mortgage leads, organize borrower follow-ups, and build stronger referral relationships with Realtor-Go's CRM for mortgage loan officers.",
+    category: "CRM Setup",
+    audience: "Mortgage Loan Officers, Producing Branch Managers & Origination Teams",
+    badge: "Loan Officer Edition",
+    lede:
+      "A purpose-built GoHighLevel CRM engineered for mortgage loan officers to capture incoming borrower leads in seconds, automate loan milestone notifications, and nurture Realtor referral networks on autopilot.",
+    problemStatement: {
+      headline: "High-producing loan officers waste 15+ hours every week manually chasing borrower docs and fielding status calls from real estate agents.",
+      description:
+        "When market conditions fluctuate, speed-to-lead and instant communication make or break origination volume. Disorganized pipelines, missed follow-ups on 1003 applications, and neglected referral partners directly cost you funded deals.",
+      stats: { value: "79%", label: "Of prospective mortgage borrowers choose the first loan officer who responds" },
+    },
+    deliverables: [
+      {
+        title: "Complete Loan Origination Pipeline Architecture",
+        description: "Custom pipeline tracking every borrower from initial quote to closing and beyond.",
+        badge: "Production Stages",
+        bullets: [
+          "Pre-Qualification, Application Out, Pre-Approved, Underwriting, and CTC milestones",
+          "Automated instant text alerts to borrowers on loan status progressions",
+          "Automated agent co-branding and real estate partner update notifications",
+        ],
+      },
+      {
+        title: "Speed-to-Lead & Stalled 1003 Reactivation",
+        description: "Engage borrowers in under 60 seconds and recover incomplete mortgage applications.",
+        badge: "Conversion Engine",
+        bullets: [
+          "Multi-channel SMS, email, and ringless voicemail response within 1 minute of inquiry",
+          "Automated nudges for missing W-2s, tax returns, and bank statements",
+          "Long-term rate watch and market update campaigns for rate-sensitive borrowers",
+        ],
+      },
+      {
+        title: "Realtor Partner Co-Marketing & Referral Tracking",
+        description: "Automate updates to referring real estate agents so they keep sending deals your way.",
+        badge: "Referral Growth",
+        bullets: [
+          "Real-time pipeline transparency: keep referring agents in the loop at every milestone",
+          "Co-branded lead capture funnels and open house registration assets",
+          "Automatic 'Thank You' sequences and periodic lunch/coffee check-in reminders",
+        ],
+      },
+      {
+        title: "Post-Funded Client Retention & Refi Opportunities",
+        description: "Turn past funded borrowers into lifetime clients and repeat refinance opportunities.",
+        badge: "Lifetime Retention",
+        bullets: [
+          "Annual mortgage reviews and equity milestone checkups",
+          "Automated loan anniversary, birthday, and holiday touchpoints",
+          "Smart rate-drop alerts triggered when refinancing becomes mathematically profitable",
+        ],
+      },
+    ],
+    pipelineStages: [
+      { name: "Rate Quote / Lead", action: "Instant text reply with scheduling calendar & pre-qual link", delay: "< 1 min" },
+      { name: "Application In Progress", action: "Doc collection reminders for 1003, paystubs & W2s", delay: "+3 hours" },
+      { name: "Pre-Approved", action: "Pre-approval letter dispatched + weekly weekend shopping check-ins", delay: "Weekly" },
+      { name: "In Processing / Underwriting", action: "Synchronized milestone text to borrower & buyer's agent", delay: "On Stage Move" },
+      { name: "Clear to Close", action: "Celebration message + final wire/closing instructions", delay: "Instant" },
+      { name: "Funded / Lifetime Nurture", action: "5-star Google review request + annual mortgage equity audit", delay: "+14 days" },
+    ],
+    faqs: [
+      {
+        question: "How does this CRM connect with my existing Loan Origination Software (LOS)?",
+        answer:
+          "We integrate GoHighLevel with platforms like Arive, LendingPad, and Encompass via webhook triggers and API connections so milestone updates sync automatically without double data entry.",
+      },
+      {
+        question: "Can I manage both borrower leads and Realtor referral partners in one account?",
+        answer:
+          "Yes. We configure dedicated pipelines and tags: one for active borrower applications and a separate partner pipeline to nurture, track, and score your real estate agent referral relationships.",
+      },
+      {
+        question: "Is the SMS messaging compliant with financial and carrier regulations?",
+        answer:
+          "100%. We handle full A2P 10DLC brand and campaign registration with The Campaign Registry (TCR) to prevent carrier filtering, and ensure explicit opt-in/opt-out consent mechanisms are built in.",
+      },
+      {
+        question: "Can my loan officer assistants or processors use the CRM too?",
+        answer:
+          "Yes. GoHighLevel includes unlimited user seats with granular permission controls, allowing your processors, assistants, and LOAs to collaborate seamlessly on notes and pipeline stages.",
+      },
+    ],
+    relatedSlugs: ["mortgage-crm-setup", "mortgage-lead-follow-up-automation", "crm-workflow-automation"],
   },
 ];
 

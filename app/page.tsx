@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import FactsStrip from "@/components/FactsStrip";
@@ -12,6 +13,13 @@ import Faq from "@/components/Faq";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { BASE_URL } from "@/lib/services-data";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: BASE_URL,
+  },
+};
 
 export default function Home() {
   return (

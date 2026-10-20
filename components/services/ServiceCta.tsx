@@ -22,7 +22,7 @@ export default function ServiceCta({
 
           <div data-r style={delay(1)} className="cta-row justify-center">
             <a className="btn btn-primary" href={SITE.bookingUrl}>
-              Book a 20-minute fit call <ArrowRight />
+              Book a Free Strategy Call <ArrowRight />
             </a>
             <a className="btn btn-ghost" href={`mailto:${SITE.email}`}>
               Email {SITE.email}
