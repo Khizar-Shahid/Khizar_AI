@@ -23,7 +23,7 @@ export default function Faq() {
           <div className="faq" data-r>
             {faqs.map(([q, a], i) => (
               <details key={q} open={i === 0}>
-                <summary>{q}</summary>
+                <summary><h3>{q}</h3></summary>
                 <div className="ans"><p>{a}</p></div>
               </details>
             ))}

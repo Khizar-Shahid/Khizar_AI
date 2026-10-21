@@ -46,15 +46,13 @@ export default function ServiceFaq({ faqs, title = "Frequently Asked Questions" 
             </p>
           </div>
 
-          <div className="faq-list">
+          <div className="faq-list" data-r style={delay(0)}>
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <div
                   key={faq.question}
                   className={`faq-item${isOpen ? " open" : ""}`}
-                  data-r
-                  style={delay(idx)}
                 >
                   <button
                     type="button"
@@ -62,16 +60,14 @@ export default function ServiceFaq({ faqs, title = "Frequently Asked Questions" 
                     aria-expanded={isOpen}
                     onClick={() => toggle(idx)}
                   >
-                    <span>{faq.question}</span>
+                    <h3><span>{faq.question}</span></h3>
                     <span className="faq-toggle" aria-hidden="true">
                       {isOpen ? <Minus /> : <Plus />}
                     </span>
                   </button>
-                  {isOpen && (
-                    <div className="faq-a">
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
+                  <div className="faq-a" hidden={!isOpen}>
+                    <p>{faq.answer}</p>
+                  </div>
                 </div>
               );
             })}

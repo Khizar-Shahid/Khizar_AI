@@ -69,12 +69,6 @@ const serviceCategories = [
   },
 ];
 
-const regularLinks = [
-  ["/#inside", "What's inside"],
-  ["/#how", "How it works"],
-  ["/#pricing", "Pricing"],
-  ["/#faq", "FAQ"],
-];
 
 export default function Header({ theme }: { theme?: "light" | "dark" }) {
   const [open, setOpen] = useState(false);
@@ -150,6 +144,16 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
         </button>
 
         <nav className="topnav" id="main-nav" aria-label="Main">
+          <a href="/#inside" onClick={closeAll}>
+            What&apos;s inside
+          </a>
+          <a href="/#how" onClick={closeAll}>
+            How it works
+          </a>
+          <a href="/#pricing" onClick={closeAll}>
+            Pricing
+          </a>
+
           {/* Services Dropdown Item */}
           <div
             className={`nav-dropdown${servicesOpen ? " active" : ""}`}
@@ -203,12 +207,9 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
             </div>
           </div>
 
-          {/* Regular Navigation Links */}
-          {regularLinks.map(([href, label]) => (
-            <a href={href} key={href} onClick={closeAll}>
-              {label}
-            </a>
-          ))}
+          <a href="/#faq" onClick={closeAll}>
+            FAQ
+          </a>
 
           <a className="btn btn-primary btn-sm" href={SITE.bookingUrl} onClick={closeAll}>
             Book a fit call

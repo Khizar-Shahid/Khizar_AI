@@ -8,7 +8,7 @@ interface ServiceCtaProps {
 
 export default function ServiceCta({
   headline = "Ready to put your CRM & follow-up on autopilot?",
-  subhead = "Book a 20-minute fit call. We'll look at your current lead flow, audit your pipeline, and outline the exact GoHighLevel architecture for your market.",
+  subhead = "Book a Free Strategy Call. We'll look at your current lead flow, audit your pipeline, and outline the exact GoHighLevel architecture for your market.",
 }: ServiceCtaProps) {
   return (
     <section className="band band-pine cta-band" aria-labelledby="cta-heading">

@@ -33,6 +33,10 @@ export interface ServiceItem {
     stats?: { value: string; label: string };
   };
   deliverables: ServiceDeliverable[];
+  deliverablesHead?: {
+    headline: string;
+    subheadline?: string;
+  };
   pipelineStages: PipelineStage[];
   faqs: ServiceFaqItem[];
   relatedSlugs: string[];
@@ -44,11 +48,11 @@ export const SERVICES_HUB_DATA = {
   url: `${BASE_URL}/services`,
   primaryKeyword: "GoHighLevel CRM Setup",
   title: "GoHighLevel CRM Setup Services Across the USA | Realtor-Go",
-  h1: "GoHighLevel CRM Setup & Automation Services for Real Estate and Mortgage Businesses",
+  h1: "Stop Losing Leads. Start Closing More Deals",
   metaDescription:
-    "Realtor-Go provides GoHighLevel CRM setup, real estate and mortgage CRM solutions, lead follow-up automation, marketing automation, and CRM migration services across the USA.",
+    "Simplify lead management with GoHighLevel CRM setup, real estate and mortgage automation, follow-up workflows, and CRM migration services.",
   lede:
-    "Turn GoHighLevel into a turn-key revenue engine built specifically for US real estate agents, mortgage brokers, and growing teams. From custom pipelines and speed-to-lead automations to full CRM migrations, we handle the technical architecture so you can focus on closings.",
+    "Realtor-Go builds customized GoHighLevel CRM systems for US real estate and mortgage businesses. From custom pipelines to automated follow-ups and appointment scheduling, we help you respond faster, manage leads efficiently, and convert more prospects into clients.",
   stats: [
     { value: "< 60s", label: "Average automated speed-to-lead response time" },
     { value: "100%", label: "Done-for-you 10DLC compliance & carrier registration" },
@@ -70,12 +74,17 @@ export const SERVICES_LIST: ServiceItem[] = [
     audience: "Solo Agents, High-Producing Teams & Independent Brokerages",
     badge: "Agent & Brokerage Edition",
     lede:
-      "Stop letting incoming buyer and seller leads fall through cracks in spreadsheets and bloated software. We build a clean, unified GoHighLevel real estate CRM customized for your local market, team hierarchy, and pipeline stages.",
+      "Stop letting buyer and seller leads fall through the cracks. We build a customized GoHighLevel real estate CRM that fits your local market, team structure, and sales pipeline.",
     problemStatement: {
-      headline: "The average real estate agent loses 70% of online leads due to slow follow-up and disorganized contact records.",
+      headline: "Stop Losing Real Estate Leads to Slow Follow-Ups",
       description:
-        "Portal inquiries, open house visitors, and website forms end up scattered across different inboxes. Without structured pipeline stages and immediate automated replies, warm prospects call the next agent on Google.",
+        "Real estate agents can lose potential clients when leads are not followed up with on time. Website inquiries, property portal leads, and open house contacts can easily be missed when they are spread across different tools.\n\nRealtor-Go provides real estate CRM setup services using GoHighLevel to help agents and real estate teams manage leads, organize contacts, and track opportunities in one place. We set up automated follow-ups, lead pipelines, and workflows tailored to your business, helping you respond faster, stay organized, and turn more leads into clients.",
       stats: { value: "70%", label: "Of leads choose the first agent who replies within 5 minutes" },
+    },
+    deliverablesHead: {
+      headline: "Custom Real Estate CRM Setup Built for Your Business",
+      subheadline:
+        "Get a real estate CRM configured around your business needs, team structure, and sales process. We set up GoHighLevel workflows, lead pipelines, automated follow-ups, and contact management, then test everything before handover so your team can manage leads more efficiently.",
     },
     deliverables: [
       {
@@ -129,24 +138,34 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     faqs: [
       {
-        question: "How long does a full Real Estate CRM setup take?",
+        question: "Which CRM is best for real estate?",
         answer:
-          "Most setups are fully completed, tested, and handed over within 10 to 14 business days. This includes pipeline builds, workflow automation, 10DLC registration, and a dedicated 1-on-1 walkthrough.",
+          "The best CRM depends on your business needs. GoHighLevel, Follow Up Boss, and HubSpot are popular options for managing leads and follow-ups.",
       },
       {
-        question: "Will this integrate with my existing lead sources (Zillow, Realtor.com, Facebook)?",
+        question: "Which CRM do real estate agents use?",
         answer:
-          "Yes. We integrate your GoHighLevel instance directly with Zillow, Realtor.com, Facebook Lead Ads, Google Ads, Zapier, and your custom website forms so all leads flow directly into the CRM instantly.",
+          "Real estate agents use CRMs like GoHighLevel, Follow Up Boss, HubSpot, and kvCORE to manage contacts, track leads, and automate follow-ups.",
       },
       {
-        question: "Do you help with 10DLC carrier compliance for texting?",
+        question: "What are CRM systems in real estate?",
         answer:
-          "Yes, 10DLC registration is included in every setup. We handle your brand verification, campaign submission, and sample message formatting so your outbound SMS messages deliver reliably to US numbers.",
+          "Real estate CRM systems help agents organize contacts, manage leads, track deals, and follow up with potential buyers and sellers.",
       },
       {
-        question: "Can I bring my team members onto the platform?",
+        question: "What is the best CRM for estate agents?",
         answer:
-          "Absolutely. We configure user permissions, individual calendar links, team routing rules (round-robin or claim-based), and pipeline visibility appropriate for team leaders and agents.",
+          "The best CRM depends on your budget and workflow. GoHighLevel is a useful option for agents who want automated follow-ups, lead tracking, and marketing tools.",
+      },
+      {
+        question: "Do I need a CRM for real estate?",
+        answer:
+          "Yes, a CRM can help you organize leads, respond faster, manage follow-ups, and keep track of potential deals in one place.",
+      },
+      {
+        question: "Who is the Big 4 in real estate?",
+        answer:
+          "There is no single official Big Four in real estate. The term can refer to the largest companies in a specific market or sector, depending on the context.",
       },
     ],
     relatedSlugs: ["gohighlevel-real-estate-crm-setup", "real-estate-lead-follow-up-automation", "crm-workflow-automation"],
@@ -163,12 +182,17 @@ export const SERVICES_LIST: ServiceItem[] = [
     audience: "Independent Mortgage Brokers, Loan Officers & Branch Managers",
     badge: "Loan Officer Edition",
     lede:
-      "A tailored GoHighLevel mortgage CRM built to track borrowers from initial rate inquiry through pre-approval, loan processing, and long-term past borrower retention. Keep Realtor partners updated without manual phone tag.",
+      "Manage mortgage leads, borrower follow-ups, and loan pipelines with a customized GoHighLevel CRM. Realtor-Go helps US mortgage brokers and loan officers organize borrower information, track leads from initial inquiry to loan closing, and automate follow-ups.\n\nWe set up your CRM around your business workflow, helping you stay connected with referral partners, manage leads efficiently, and spend less time on manual tasks.",
     problemStatement: {
       headline: "Mortgage leads go cold while loan officers spend hours manually typing milestone emails to buyers and real estate agents.",
       description:
         "Borrowers need speed, reassurance, and consistent document reminders. When loan officers get bogged down in underwriting tasks, prospective pre-approvals stall and partner referral sources slip away.",
       stats: { value: "82%", label: "Of borrowers never hear from their original loan officer after closing" },
+    },
+    deliverablesHead: {
+      headline: "Custom Mortgage CRM Setup, Tested and Ready to Use",
+      subheadline:
+        "No generic templates or disconnected workflows. Realtor-Go customizes your GoHighLevel mortgage CRM to match your loan process, borrower pipeline, and referral partner needs. We configure automated follow-ups, loan milestone notifications, and borrower retention workflows, then test the setup before handover.",
     },
     deliverables: [
       {
@@ -222,24 +246,24 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     faqs: [
       {
-        question: "Can this system integrate with my LOS (Loan Origination System)?",
+        question: "What is the best CRM for mortgages?",
         answer:
-          "Yes. We set up webhook and Zapier triggers for modern LOS platforms like Arive, LendingPad, and Encompass, or configure structured CSV data synchronizations for past borrower databases.",
+          "The best mortgage CRM depends on your business needs. GoHighLevel is an option for managing leads, automating follow-ups, and organizing borrower communication.",
       },
       {
-        question: "How does the system keep real estate agents updated?",
+        question: "What is a CRM in mortgages?",
         answer:
-          "Whenever a borrower moves to a key pipeline stage (such as 'Pre-Approved', 'Appraisal Ordered', or 'Clear to Close'), an automated SMS or email can be automatically fired to the assigned buyer's agent.",
+          "A mortgage CRM is a tool that helps loan officers manage borrowers, track leads, send follow-ups, and organize loan-related communication in one place.",
       },
       {
-        question: "Is communication compliant with financial regulations?",
+        question: "What CRM do mortgage brokers use?",
         answer:
-          "Yes. We configure full 10DLC messaging compliance, mandatory opt-out wording, and ensure all messaging is conversational, professional, and compliant with consumer communication standards.",
+          "Mortgage brokers use CRMs such as GoHighLevel, Jungo, and Surefire CRM to manage leads, follow up with borrowers, and maintain client relationships.",
       },
       {
-        question: "Can we import our existing database of funded past clients?",
+        question: "How to set up a CRM?",
         answer:
-          "Yes. We map your past funded loans, extract interest rates and closing dates, and establish annual mortgage checkup workflows to secure refinance and repeat business.",
+          "To set up a CRM, add your contacts, organize your lead pipeline, configure automated follow-ups, and create workflows that match your business needs. Test everything before using it with real leads.",
       },
     ],
     relatedSlugs: ["mortgage-lead-follow-up-automation", "crm-workflow-automation", "crm-migration-services"],

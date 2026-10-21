@@ -31,29 +31,24 @@ export const metadata: Metadata = {
 
 const hubFaqs = [
   {
-    question: "What makes Realtor-Go different from standard GoHighLevel agencies?",
+    question: "How to use GoHighLevel CRM?",
     answer:
-      "We specialize exclusively in US real estate agents, teams, brokerages, and mortgage loan officers. We don't use generic templates—we build custom pipelines, 10DLC compliant messaging cadences, and deep integrations (Zillow, Realtor.com, LOS systems) configured specifically for how you do deals.",
+      "Use GoHighLevel to manage leads, track sales pipelines, automate follow-ups, and schedule appointments in one place.",
   },
   {
-    question: "Do you build the system in our own GoHighLevel account?",
+    question: "How to set up a CRM system?",
     answer:
-      "Yes. We can install and configure the entire system within your existing GoHighLevel agency account or sub-account, or provide a fully managed account hosted on our high-performance infrastructure.",
+      "Set up your contacts, sales pipelines, follow-up automations, and appointment calendar. Realtor-Go can customize the system for your business.",
   },
   {
-    question: "Are your text messaging workflows 10DLC compliant?",
+    question: "Is GoHighLevel a good CRM?",
     answer:
-      "100%. We handle your brand verification, campaign submission with The Campaign Registry (TCR), and ensure carrier compliance with opt-out mechanisms so your text messages get delivered reliably.",
+      "Yes, GoHighLevel is useful for managing leads, automating follow-ups, and tracking customer relationships, especially for real estate and mortgage businesses.",
   },
   {
-    question: "How long does a complete setup take?",
+    question: "Which is better, HubSpot or GoHighLevel?",
     answer:
-      "Standard deployments take between 10 and 14 business days from kickoff call to final delivery. This includes all pipeline builds, automation sequences, third-party integrations, data testing, and team training.",
-  },
-  {
-    question: "What kind of ongoing support do you offer?",
-    answer:
-      "We operate month-to-month with no long-term contracts. You have direct access to the exact systems specialist who architected your account for optimizations, workflow tweaks, and support.",
+      "It depends on your needs. GoHighLevel focuses on CRM, marketing automation, and lead follow-ups, while HubSpot offers CRM tools for sales, marketing, and customer service.",
   },
 ];
 
@@ -97,7 +92,7 @@ export default function ServicesPage() {
               <span className="eyebrow">End-to-End CRM Engineering</span>
               <h2 id="pillars-heading">Complete GoHighLevel Systems Tailored to Your Pipeline</h2>
               <p className="section-sub">
-                Explore our core practice areas built to scale your transactions, eliminate manual tasks, and protect client relationships.
+                Explore our specialized CRM services to automate follow-ups, manage leads efficiently, reduce manual work, and turn more prospects into clients.
               </p>
             </div>
 
@@ -140,7 +135,7 @@ export default function ServicesPage() {
 
         <ServiceCta
           headline="Ready to build your ultimate real estate or mortgage CRM?"
-          subhead="Schedule a 20-minute fit call. We'll review your current software, uncover automation gaps, and present a custom GoHighLevel roadmap."
+          subhead="Schedule a Free Strategy Call. We'll review your current software, uncover automation gaps, and present a custom GoHighLevel roadmap."
         />
       </main>
       <Footer />

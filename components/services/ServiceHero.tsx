@@ -46,7 +46,11 @@ export default function ServiceHero({
           </div>
 
           <div data-r style={delay(2)}>
-            <p className="lede service-lede">{lede}</p>
+            <div className="lede service-lede space-y-4">
+              {lede.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
           </div>
 
           <div data-r style={delay(3)} className="cta-row">

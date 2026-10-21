@@ -98,6 +98,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <ServiceFeatures
           problem={service.problemStatement}
           deliverables={service.deliverables}
+          deliverablesHead={service.deliverablesHead}
         />
 
         <ServicePipelineVisual
@@ -117,7 +118,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
         <ServiceCta
           headline={`Ready to launch your ${service.primaryKeyword.toLowerCase()}?`}
-          subhead="Book a 20-minute fit call. We'll map your current workflow, identify quick wins, and share an exact blueprint tailored for your team."
+          subhead="Book a Free Strategy Call. We'll map your current workflow, identify quick wins, and share an exact blueprint tailored for your team."
         />
       </main>
       <Footer />

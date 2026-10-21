@@ -9,9 +9,13 @@ interface ServiceFeaturesProps {
     stats?: { value: string; label: string };
   };
   deliverables: ServiceDeliverable[];
+  deliverablesHead?: {
+    headline: string;
+    subheadline?: string;
+  };
 }
 
-export default function ServiceFeatures({ problem, deliverables }: ServiceFeaturesProps) {
+export default function ServiceFeatures({ problem, deliverables, deliverablesHead }: ServiceFeaturesProps) {
   return (
     <>
       {/* Problem / Context Band */}
@@ -23,7 +27,11 @@ export default function ServiceFeatures({ problem, deliverables }: ServiceFeatur
               <h2 id="problem-heading" className="problem-title">
                 {problem.headline}
               </h2>
-              <p className="problem-desc">{problem.description}</p>
+              <div className="problem-desc space-y-4">
+                {problem.description.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
             </div>
             {problem.stats && (
               <div className="problem-stat-box" data-r style={delay(1)}>
@@ -40,10 +48,12 @@ export default function ServiceFeatures({ problem, deliverables }: ServiceFeatur
         <div className="wrap">
           <div className="section-head text-center" data-r style={delay(0)}>
             <span className="eyebrow">What we build for you</span>
-            <h2 id="deliverables-heading">Turnkey deliverables engineered for your business</h2>
+            <h2 id="deliverables-heading">
+              {deliverablesHead?.headline ?? "Turnkey deliverables engineered for your business"}
+            </h2>
             <p className="section-sub">
-              No generic templates or broken workflows. Every component is custom-configured, tested with real data,
-              and handed over ready to produce.
+              {deliverablesHead?.subheadline ??
+                "No generic templates or broken workflows. Every component is custom-configured, tested with real data, and handed over ready to produce."}
             </p>
           </div>
 
