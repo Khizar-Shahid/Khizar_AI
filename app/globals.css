@@ -482,13 +482,15 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  right: 0;
+  left: auto;
+  transform: translateY(8px);
   background: #0A1511;
   border: 1px solid #24433C;
   border-radius: var(--radius);
   padding: 24px;
-  min-width: 760px;
+  width: 760px;
+  max-width: calc(100vw - 32px);
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(16px);
   opacity: 0;
@@ -503,7 +505,7 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 /* Invisible bridge so cursor never leaves dropdown hit area */
@@ -524,7 +526,20 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .nav-dropdown-menu {
+    width: 660px;
+    padding: 18px;
+  }
+  .nav-dropdown-grid {
+    gap: 12px;
+  }
+  .nav-item-desc {
+    display: none;
   }
 }
 
@@ -660,14 +675,18 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
     flex-direction: column;
     align-items: stretch;
     gap: 2px;
-    padding: 12px 24px 24px;
+    padding: 12px 24px 32px;
     background: var(--forest);
     border-bottom: 1px solid var(--line);
-    font-size: 18px
+    font-size: 18px;
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   header.top.open .topnav {
-    display: flex
+    display: flex;
   }
 
   .topnav a:not(.btn) {
