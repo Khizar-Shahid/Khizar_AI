@@ -30,6 +30,11 @@ const serviceCategories = [
         label: "GoHighLevel Real Estate CRM",
         desc: "Turnkey GHL snapshot & build",
       },
+      {
+        href: "/services/gohighlevel-for-mortgage",
+        label: "GoHighLevel for Mortgage",
+        desc: "Brokers, LOs & lending teams",
+      },
     ],
   },
   {

@@ -917,7 +917,105 @@ export const SERVICES_LIST: ServiceItem[] = [
           "Yes. GoHighLevel includes unlimited user seats with granular permission controls, allowing your processors, assistants, and LOAs to collaborate seamlessly on notes and pipeline stages.",
       },
     ],
-    relatedSlugs: ["mortgage-crm-setup", "mortgage-lead-follow-up-automation", "crm-workflow-automation"],
+    relatedSlugs: ["gohighlevel-for-mortgage", "mortgage-crm-setup", "mortgage-lead-follow-up-automation"],
+  },
+  {
+    slug: "gohighlevel-for-mortgage",
+    url: `${BASE_URL}/services/gohighlevel-for-mortgage`,
+    primaryKeyword: "GoHighLevel for Mortgage",
+    title: "GoHighLevel for Mortgage Brokers | CRM Setup",
+    h1: "GoHighLevel CRM Setup for Mortgage Brokers",
+    metaDescription:
+      "Streamline your mortgage business with GoHighLevel CRM setup. Automate lead follow-ups, manage mortgage leads, and improve client communication.",
+    category: "CRM Setup",
+    audience: "Independent Mortgage Brokers, Wholesale Loan Specialists & Brokerage Owners",
+    badge: "Broker Edition",
+    lede:
+      "A complete GoHighLevel CRM setup configured specifically for mortgage brokers to automate borrower lead follow-ups, speed up 1003 loan application completion, and keep referring agents in the loop effortlessly.",
+    problemStatement: {
+      headline: "Mortgage brokers lose qualified borrowers every week due to delayed response times and fragmented communication across multiple tools.",
+      description:
+        "Juggling rate quotes, borrower documentation checklists, and Realtor referral partners across separate spreadsheets and inboxes causes deals to stall. Without an automated mortgage CRM engine, high-intent leads go cold before you ever pull credit.",
+      stats: { value: "391%", label: "Increase in lead-to-opportunity conversions when responding within 1 minute" },
+    },
+    deliverables: [
+      {
+        title: "Complete Mortgage Broker Snapshot Architecture",
+        description: "Tailored GoHighLevel build engineered for loan origination workflows and borrower lifecycles.",
+        badge: "Custom Architecture",
+        bullets: [
+          "Pre-built pipelines: New Lead, Rate Quote Sent, 1003 In Progress, Pre-Approved, Underwriting, CTC, and Funded",
+          "Custom mortgage fields for loan type (Conventional, FHA, VA, DSCR), loan amount, purchase price, and credit tier",
+          "Dedicated Realtor referral partner pipeline with automatic commission and deal progress tracking",
+        ],
+      },
+      {
+        title: "Instant Multi-Channel Borrower Follow-Up Workflows",
+        description: "Speed-to-lead automation that connects with inbound mortgage prospects within 60 seconds.",
+        badge: "Speed to Lead",
+        bullets: [
+          "Automated conversational SMS and email sequences tailored to home buyers and refinancing homeowners",
+          "Missed-call text-back that captures borrowers when you are on underwriting or client calls",
+          "Smart calendar booking with automated pre-qualification questionnaire routing",
+        ],
+      },
+      {
+        title: "Automated Milestone Updates for Borrowers & Realtors",
+        description: "Eliminate repetitive status update calls by automatically keeping everyone informed.",
+        badge: "Milestone Sync",
+        bullets: [
+          "Automated SMS/email notifications sent simultaneously to borrower and buyer's agent at every key milestone",
+          "Document collection reminder sequences nudging borrowers to upload W-2s, paystubs, and bank statements",
+          "Weekly 'Still Shopping' weekend check-ins for pre-approved buyers and their real estate agents",
+        ],
+      },
+      {
+        title: "A2P 10DLC Compliance & LOS Integration",
+        description: "Carrier-compliant messaging setup and clean data sync with your mortgage tech stack.",
+        badge: "Turnkey Compliance",
+        bullets: [
+          "Done-for-you A2P 10DLC brand and campaign registration with TCR to ensure maximum SMS deliverability",
+          "Compliant opt-in web forms, disclosure footers, and STOP/HELP handling",
+          "Webhook and API integrations connecting GoHighLevel with your LOS (Arive, LendingPad, Encompass) and Zapier",
+        ],
+      },
+    ],
+    pipelineStages: [
+      { name: "New Lead / Rate Inquiry", action: "Instant multi-channel SMS & pre-qual calendar link", delay: "< 1 min" },
+      { name: "1003 Application Out", action: "Automated document checklist & upload reminder nudges", delay: "+4 hours" },
+      { name: "Pre-Approved", action: "Pre-approval dispatch + agent co-branded shopping alerts", delay: "Weekly" },
+      { name: "In Underwriting", action: "Synchronized milestone text to borrower & referring agent", delay: "Stage Trigger" },
+      { name: "Clear to Close", action: "Celebratory alert + final closing & funding check-in", delay: "Instant" },
+      { name: "Closed & Funded Nurture", action: "Google review sequence + automated equity & refi rate watch", delay: "+7 days" },
+    ],
+    faqs: [
+      {
+        question: "How does GoHighLevel compare to traditional mortgage CRMs?",
+        answer:
+          "Traditional mortgage CRMs often charge high per-seat fees with rigid, outdated email templates. GoHighLevel offers modern multi-channel automation (SMS, voice, email), pipeline visibility, calendar booking, and unlimited user seats at a fraction of the operating cost.",
+      },
+      {
+        question: "Can GoHighLevel connect with my Loan Origination System (LOS)?",
+        answer:
+          "Yes. We configure webhooks and API connections to sync lead data and loan milestone stages with platforms such as Arive, LendingPad, Floify, and Encompass, preventing redundant manual data entry.",
+      },
+      {
+        question: "How do you ensure our text messages comply with A2P 10DLC and mortgage regulations?",
+        answer:
+          "We handle end-to-end A2P 10DLC brand and campaign registration through The Campaign Registry (TCR). We also implement explicit opt-in checkboxes on forms, required disclaimer language, and automated opt-out keywords to safeguard compliance.",
+      },
+      {
+        question: "Will our referring real estate agents receive updates automatically?",
+        answer:
+          "Yes. Whenever a loan moves to key stages like Pre-Approved, Appraisal Ordered, or Clear to Close, GoHighLevel can fire automated, co-branded SMS or email notifications directly to the buyer's agent.",
+      },
+      {
+        question: "How long does a full GoHighLevel mortgage setup take?",
+        answer:
+          "A full customized setup is typically delivered within 10 to 14 business days, including pipeline configuration, follow-up automations, form/calendar setup, and complete testing before handoff.",
+      },
+    ],
+    relatedSlugs: ["mortgage-loan-officer-crm", "mortgage-crm-setup", "mortgage-lead-follow-up-automation"],
   },
 ];
 
