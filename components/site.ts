@@ -3,7 +3,8 @@ import type React from "react";
 // Edit these in one place.
 export const SITE = {
   email: "hello@realtor-go.com", // TODO: replace with your real address
-  bookingUrl: "#start", // TODO: replace with your booking link (e.g. your GHL calendar)
+  bookingUrl: "/contact", // Leads to contact page with embedded calendar
+  calendarUrl: "https://calendly.com/shahidkhizar1403/30min",
   confirmationUrl: "/confirmation",
   sources: {
     nar: "https://www.realestatenews.com/2023/09/04/agents-decoded-your-database-is-a-goldmine-if-you-use-it",

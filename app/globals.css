@@ -3814,6 +3814,128 @@ html[data-reveal] [data-r].in {
   }
 }
 
+/* ── contact page ────────────────────────────────────── */
+
+.contact-hero {
+  padding-block: clamp(140px, 16vw, 200px) clamp(60px, 8vw, 100px);
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(50% 80% at 50% 100%, rgba(214,220,92,.15), transparent 65%),
+    radial-gradient(60% 50% at 80% 0%, rgba(28,61,54,.9), transparent 60%);
+}
+
+.contact-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(42px, 6.5vw, 76px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: normal;
+}
+
+.contact-lede {
+  font-size: clamp(17px, 1.8vw, 20px);
+  color: var(--fg-dim);
+  max-width: 52ch;
+  line-height: 1.65;
+}
+
+/* cal.com embed section */
+.contact-cal-section {
+  padding-block: clamp(48px, 6vw, 80px) clamp(72px, 9vw, 120px);
+}
+
+.contact-cal-wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-cal-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.04),
+    0 8px 24px -8px rgba(0,0,0,.08),
+    0 40px 64px -24px rgba(0,0,0,.06);
+  min-height: 900px;
+  position: relative;
+}
+
+.contact-cal-card iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+/* alternate contact band */
+.contact-alt-section {
+  padding-block: clamp(48px, 6vw, 80px);
+}
+
+.contact-alt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  flex-wrap: wrap;
+  padding: clamp(32px, 4vw, 48px);
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.contact-alt-text {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-alt-text h2 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.contact-alt-text p {
+  color: var(--fg-dim);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.contact-alt-actions .btn {
+  font-family: var(--body);
+  font-size: 16px;
+}
+
+@media (max-width:640px) {
+  .contact-alt {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (prefers-reduced-motion:reduce) {
   * {
     transition: none !important;

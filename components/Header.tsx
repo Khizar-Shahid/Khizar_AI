@@ -215,6 +215,9 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
           <a href="/#faq" onClick={closeAll}>
             FAQ
           </a>
+          <a href="/contact" onClick={closeAll}>
+            Contact
+          </a>
 
           <a className="btn btn-primary btn-sm" href={SITE.bookingUrl} onClick={closeAll}>
             Book a fit call
