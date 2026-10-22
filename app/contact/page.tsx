@@ -23,68 +23,61 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="contact-page-wrapper">
       <Header theme="dark" />
-      <main>
-        {/* Hero */}
-        <section className="band contact-hero" aria-labelledby="h-contact">
-          <div className="wrap">
-            <div className="contact-hero-inner" data-r>
-              <p className="eyebrow">Contact</p>
-              <h1 id="h-contact">
-                Let&apos;s find out if this <em>fits</em>.
-              </h1>
-              <p className="contact-lede">
-                Pick a time below for a quick 30-minute call. No pitch —
-                just an honest look at whether Realtor-Go is the right move for your
-                business.
+      <main className="contact-main">
+        <div className="contact-wireframe-grid">
+          {/* Left card: Text here (heading and para) */}
+          <div className="contact-text-card">
+            <p className="eyebrow">Contact</p>
+            <h1>
+              Let&apos;s find out if this <em>fits</em>.
+            </h1>
+            <p className="contact-lede">
+              Pick a time for a quick 30-minute call. No pitch — just an
+              honest look at whether Realtor-Go is the right move for your
+              business.
+            </p>
+          </div>
+
+          {/* Right card: Calendar here (without scroll bars) */}
+          <div className="contact-calendar-card">
+            <iframe
+              src="https://calendly.com/shahidkhizar1403/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+              title="Book a Fit Call — Realtor-Go"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              loading="lazy"
+              style={{ border: "none", width: "100%", height: "100%", display: "block" }}
+            />
+          </div>
+        </div>
+      </main>
+
+      {/* Alternate contact section just above footer */}
+      <section className="band band-pine contact-alt-section" aria-labelledby="h-alt-contact">
+        <div className="wrap">
+          <div className="contact-alt" data-r>
+            <div className="contact-alt-text">
+              <h2 id="h-alt-contact">Prefer to start over <em>email</em>?</h2>
+              <p>
+                Send us a quick note with your role, current CRM, and roughly how
+                many contacts you manage. We&apos;ll get back to you within one business day.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Calendar Embed */}
-        <section className="band band-light contact-cal-section" aria-label="Book a call">
-          <div className="wrap">
-            <div className="contact-cal-wrapper" data-r>
-              <div className="contact-cal-card">
-                <iframe
-                  src="https://calendly.com/shahidkhizar1403/30min"
-                  title="Book a Fit Call — Realtor-Go"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  loading="lazy"
-                  style={{ border: "none", minHeight: 900 }}
-                />
-              </div>
+            <div className="contact-alt-actions">
+              <a className="btn btn-primary" href={`mailto:${SITE.email}`}>
+                {SITE.email}
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Alternate contact */}
-        <section className="band contact-alt-section" aria-labelledby="h-alt-contact">
-          <div className="wrap">
-            <div className="contact-alt" data-r>
-              <div className="contact-alt-text">
-                <h2 id="h-alt-contact">Prefer <em>email</em>?</h2>
-                <p>
-                  Drop a line with your role, the CRM you use now, and roughly
-                  how many contacts you have. I&apos;ll reply within one business day.
-                </p>
-              </div>
-              <div className="contact-alt-actions">
-                <a className="btn btn-primary" href={`mailto:${SITE.email}`}>
-                  {SITE.email}
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
       <Footer />
       <Reveal />
-    </>
+    </div>
   );
 }

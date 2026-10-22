@@ -278,13 +278,13 @@ header.top:not(.scrolled):not(.open) .mark svg {
   color: var(--forest);
 }
 
-header.top:not(.scrolled):not(.open) .topnav > a:not(.btn),
+header.top:not(.scrolled):not(.open) .topnav>a:not(.btn),
 header.top:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row a:not(.btn) {
   color: #2D4841;
   font-weight: 500;
 }
 
-header.top:not(.scrolled):not(.open) .topnav > a:not(.btn):hover,
+header.top:not(.scrolled):not(.open) .topnav>a:not(.btn):hover,
 header.top:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row:hover {
   color: var(--forest);
   background: rgba(10, 21, 17, .06);
@@ -310,17 +310,17 @@ body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .mark svg {
   color: #EAF0EC;
 }
 
-header.top.header-dark:not(.scrolled):not(.open) .topnav > a:not(.btn),
+header.top.header-dark:not(.scrolled):not(.open) .topnav>a:not(.btn),
 header.top.header-dark:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row a:not(.btn),
-body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav > a:not(.btn),
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav>a:not(.btn),
 body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row a:not(.btn) {
   color: #C2D1CB;
   font-weight: 500;
 }
 
-header.top.header-dark:not(.scrolled):not(.open) .topnav > a:not(.btn):hover,
+header.top.header-dark:not(.scrolled):not(.open) .topnav>a:not(.btn):hover,
 header.top.header-dark:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row:hover,
-body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav > a:not(.btn):hover,
+body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav>a:not(.btn):hover,
 body:has(.confirmation-band) header.top:not(.scrolled):not(.open) .topnav .nav-dropdown-trigger-row:hover {
   color: #FFFFFF;
   background: rgba(234, 240, 236, .08);
@@ -382,6 +382,7 @@ header.top.open .mark svg {
 .logo-img-light {
   display: block !important;
 }
+
 .logo-img-dark {
   display: none !important;
 }
@@ -521,6 +522,7 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
 }
 
 @media (min-width: 901px) {
+
   .nav-dropdown:hover .nav-dropdown-menu,
   .nav-dropdown-menu:hover {
     opacity: 1;
@@ -535,9 +537,11 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
     width: 660px;
     padding: 18px;
   }
+
   .nav-dropdown-grid {
     gap: 12px;
   }
+
   .nav-item-desc {
     display: none;
   }
@@ -752,6 +756,7 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
 }
 
 @media (max-width:520px) {
+
   .mark svg,
   .mark img {
     height: 34px;
@@ -800,8 +805,8 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: 
-    linear-gradient(rgba(10, 21, 17, .13) 1.5px, transparent 1.5px), 
+  background-image:
+    linear-gradient(rgba(10, 21, 17, .13) 1.5px, transparent 1.5px),
     linear-gradient(90deg, rgba(10, 21, 17, .13) 1.5px, transparent 1.5px);
   background-size: 56px 56px;
   mask-image: radial-gradient(90% 80% at 50% 35%, #000 35%, transparent 95%);
@@ -2940,6 +2945,7 @@ html[data-reveal] [data-r].in {
   .confirmation-grid {
     grid-template-columns: 1fr;
   }
+
   .confirmation-summary-card {
     position: static;
   }
@@ -3410,9 +3416,17 @@ html[data-reveal] [data-r].in {
   border-radius: 50%;
 }
 
-.pipeline-dot-group .dot.red { background: #ff5f56; }
-.pipeline-dot-group .dot.yellow { background: #ffbd2e; }
-.pipeline-dot-group .dot.green { background: #27c93f; }
+.pipeline-dot-group .dot.red {
+  background: #ff5f56;
+}
+
+.pipeline-dot-group .dot.yellow {
+  background: #ffbd2e;
+}
+
+.pipeline-dot-group .dot.green {
+  background: #27c93f;
+}
 
 .pipeline-status-text {
   font-size: 13px;
@@ -3814,81 +3828,110 @@ html[data-reveal] [data-r].in {
   }
 }
 
-/* ── contact page ────────────────────────────────────── */
+/* Header bar on contact page */
+body:has(.contact-main) header.top {
+  background: var(--forest);
+  border-bottom: 1px solid #1C3D36;
+}
 
-.contact-hero {
-  padding-block: clamp(140px, 16vw, 200px) clamp(60px, 8vw, 100px);
-  text-align: center;
+/* ── contact page (wireframe layout) ──────────────────── */
+
+.contact-page-wrapper {
+  min-height: 100vh;
+  background: var(--forest);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-main {
+  flex: 1;
+  background: #FFFFFF; /* White hero background */
+  padding-top: clamp(40px, 4.5vw, 64px);
+  padding-bottom: clamp(48px, 5.5vw, 76px);
+  padding-inline: clamp(20px, 3vw, 44px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.contact-wireframe-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 1fr;
+  gap: 24px;
+  width: 100%;
+  height: clamp(680px, 78vh, 820px);
+  min-height: 680px;
+  box-sizing: border-box;
+}
+
+/* Left Card: Text here (heading and para) */
+.contact-text-card {
+  background: var(--forest);
+  border: 1px solid #1C3D36;
+  border-radius: 20px;
+  padding: clamp(28px, 3vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  box-sizing: border-box;
+  position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
-.contact-hero::before {
+.contact-text-card::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(50% 80% at 50% 100%, rgba(214,220,92,.15), transparent 65%),
-    radial-gradient(60% 50% at 80% 0%, rgba(28,61,54,.9), transparent 60%);
+  background: radial-gradient(80% 80% at 20% 20%, rgba(214, 220, 92, .14), transparent 70%);
 }
 
-.contact-hero-inner {
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.contact-text-card .eyebrow {
+  margin-bottom: 2px;
 }
 
-.contact-hero h1 {
-  font-size: clamp(42px, 6.5vw, 76px);
+.contact-text-card h1 {
+  font-size: clamp(30px, 3vw, 44px);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.14;
   letter-spacing: normal;
+  color: var(--fg);
 }
 
-.contact-lede {
-  font-size: clamp(17px, 1.8vw, 20px);
+.contact-text-card h1 em {
+  font-style: normal;
+  color: var(--citron);
+}
+
+.contact-text-card .contact-lede {
+  font-size: 16px;
   color: var(--fg-dim);
-  max-width: 52ch;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-/* cal.com embed section */
-.contact-cal-section {
-  padding-block: clamp(48px, 6vw, 80px) clamp(72px, 9vw, 120px);
-}
-
-.contact-cal-wrapper {
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.contact-cal-card {
+/* Right Card: Calendar here (without scroll bars) */
+.contact-calendar-card {
   background: #FFFFFF;
-  border: 1px solid var(--line);
-  border-radius: calc(var(--radius) + 6px);
-  overflow: hidden;
-  box-shadow:
-    0 1px 2px rgba(0,0,0,.04),
-    0 8px 24px -8px rgba(0,0,0,.08),
-    0 40px 64px -24px rgba(0,0,0,.06);
-  min-height: 900px;
+  border: 1px solid #DAD6C6;
+  border-radius: 20px;
+  overflow: hidden; /* No scroll bars */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
   position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-.contact-cal-card iframe {
+.contact-calendar-card iframe {
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
-  inset: 0;
+  border: none;
 }
 
-/* alternate contact band */
+/* Alternate email section just above footer */
 .contact-alt-section {
   padding-block: clamp(48px, 6vw, 80px);
 }
@@ -3929,7 +3972,29 @@ html[data-reveal] [data-r].in {
   font-size: 16px;
 }
 
-@media (max-width:640px) {
+@media (max-width: 900px) {
+  .contact-main {
+    padding: 16px;
+    align-items: stretch;
+  }
+
+  .contact-wireframe-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .contact-calendar-card {
+    height: 680px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-calendar-card iframe {
+    -webkit-overflow-scrolling: touch;
+  }
+
   .contact-alt {
     flex-direction: column;
     align-items: flex-start;
