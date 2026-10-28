@@ -2,56 +2,78 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/components/site";
 import { BASE_URL } from "@/lib/services-data";
 
 export const metadata: Metadata = {
-  title: "Contact | Realtor-Go — Book a Fit Call",
+  title: "Contact | Realtor-Go — Tell Us About Your Business",
   description:
-    "Schedule a free 30-minute fit call to see if Realtor-Go is right for your real estate or mortgage business. Pick a time that works for you.",
+    "Get in touch with Realtor-Go to discuss custom GoHighLevel CRM setup, automation workflows, and past-client reactivation for your real estate or mortgage business.",
   alternates: {
     canonical: `${BASE_URL}/contact`,
   },
   openGraph: {
-    title: "Contact | Realtor-Go — Book a Fit Call",
+    title: "Contact | Realtor-Go — Request a Custom CRM Proposal",
     description:
-      "Schedule a free 30-minute fit call to see if Realtor-Go is right for your real estate or mortgage business.",
+      "Get in touch with Realtor-Go to discuss custom GoHighLevel CRM setup, automation workflows, and past-client reactivation.",
     url: `${BASE_URL}/contact`,
     type: "website",
   },
 };
 
-export default function ContactPage() {
+interface ContactPageProps {
+  searchParams?: {
+    service?: string;
+  };
+}
+
+export default function ContactPage({ searchParams }: ContactPageProps) {
+  const service = searchParams?.service;
+
   return (
     <div className="contact-page-wrapper">
       <Header theme="dark" />
       <main className="contact-main">
         <div className="contact-wireframe-grid">
-          {/* Left card: Text here (heading and para) */}
+          {/* Left card: Value prop & overview */}
           <div className="contact-text-card">
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">Contact Realtor-Go</p>
             <h1>
-              Let&apos;s find out if this <em>fits</em>.
+              Let&apos;s build your <em>CRM engine</em>.
             </h1>
             <p className="contact-lede">
-              Pick a time for a quick 30-minute call. No pitch — just an
-              honest look at whether Realtor-Go is the right move for your
-              business.
+              Tell us what you want to automate. We will review your current systems, calculate deal recovery potential, and propose a concrete implementation plan.
             </p>
+
+            <div className="contact-value-points">
+              <div className="contact-point-item">
+                <span className="point-dot" />
+                <div>
+                  <strong>Fast Response</strong>
+                  <p>Inquiries reviewed within one business day.</p>
+                </div>
+              </div>
+              <div className="contact-point-item">
+                <span className="point-dot" />
+                <div>
+                  <strong>Zero Obligation</strong>
+                  <p>Clear pricing and recommendations upfront with no high-pressure sales.</p>
+                </div>
+              </div>
+              <div className="contact-point-item">
+                <span className="point-dot" />
+                <div>
+                  <strong>Specialized For US Real Estate</strong>
+                  <p>Pre-configured for 10DLC compliance, MLS lead routing, and GHL pipelines.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right card: Calendar here (without scroll bars) */}
-          <div className="contact-calendar-card">
-            <iframe
-              src="https://calendly.com/shahidkhizar1403/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
-              title="Book a Fit Call — Realtor-Go"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              loading="lazy"
-              style={{ border: "none", width: "100%", height: "100%", display: "block" }}
-            />
+          {/* Right card: Form */}
+          <div className="contact-form-card">
+            <ContactForm initialService={service} />
           </div>
         </div>
       </main>
@@ -61,10 +83,9 @@ export default function ContactPage() {
         <div className="wrap">
           <div className="contact-alt" data-r>
             <div className="contact-alt-text">
-              <h2 id="h-alt-contact">Prefer to start over <em>email</em>?</h2>
+              <h2 id="h-alt-contact">Prefer direct <em>email</em>?</h2>
               <p>
-                Send us a quick note with your role, current CRM, and roughly how
-                many contacts you manage. We&apos;ll get back to you within one business day.
+                You can also email our engineering and strategy team directly. Send us your role, current CRM, and what you&apos;re looking to solve.
               </p>
             </div>
             <div className="contact-alt-actions">

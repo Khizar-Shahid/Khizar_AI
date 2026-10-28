@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
-import { ArrowRight, Calendar, Check, Inbox, Shield } from "@/components/Icons";
+import { ArrowRight, Check, Inbox, Shield, Star } from "@/components/Icons";
 import { SITE, delay } from "@/components/site";
 
 export const metadata: Metadata = {
-  title: "Call Scheduled & Confirmed | Realtor-Go",
+  title: "Inquiry Received & Confirmed | Realtor-Go",
   description:
-    "Your 20-minute fit call is confirmed. A calendar invitation with the meeting details has been sent to your inbox.",
+    "Thank you for contacting Realtor-Go. Our team has received your message and will review your requirements within one business day.",
   alternates: {
     canonical: "/confirmation",
   },
@@ -22,15 +22,14 @@ interface ConfirmationPageProps {
   searchParams?: {
     name?: string;
     email?: string;
-    date?: string;
-    time?: string;
+    service?: string;
   };
 }
 
 export default function ConfirmationPage({ searchParams }: ConfirmationPageProps) {
   const name = searchParams?.name?.trim();
-  const date = searchParams?.date?.trim();
-  const time = searchParams?.time?.trim();
+  const email = searchParams?.email?.trim();
+  const service = searchParams?.service?.trim();
 
   return (
     <>
@@ -43,7 +42,7 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
               <div className="confirmation-head">
                 <div data-r style={delay(0)}>
                   <span className="status-badge">
-                    <Check /> Call requested &amp; confirmed
+                    <Check /> Inquiry received &amp; logged
                   </span>
                 </div>
 
@@ -52,12 +51,12 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                     {name ? (
                       <>
                         You&apos;re all set, {name}.<br />
-                        <em>We&apos;re looking forward to talking.</em>
+                        <em>We&apos;ve got your details.</em>
                       </>
                     ) : (
                       <>
-                        You&apos;re on the calendar.<br />
-                        <em>We&apos;re looking forward to talking.</em>
+                        Inquiry received.<br />
+                        <em>We&apos;re reviewing your details.</em>
                       </>
                     )}
                   </h1>
@@ -65,8 +64,7 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
 
                 <div data-r style={delay(2)}>
                   <p className="lede">
-                    A calendar invitation with your video link has been emailed to you.
-                    Here is what to expect and how to get the most out of our 20-minute fit call.
+                    Thank you for reaching out to Realtor-Go. We take every project inquiry seriously and evaluate your CRM setup and workflow requirements before responding.
                   </p>
                 </div>
 
@@ -75,9 +73,9 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                   <div className="step-card" data-r style={delay(3)}>
                     <div className="step-num">1</div>
                     <div className="step-info">
-                      <h3>Check your inbox for the calendar invite</h3>
+                      <h3>Workflow &amp; Requirements Review</h3>
                       <p>
-                        We have dispatched an email invitation with the Google Meet / Zoom link. If you do not see it within a few minutes, check your spam or promotions tab.
+                        Our team examines your requested service {service ? `(${service})` : ""} and reviews CRM architecture to identify the best pipeline configuration and speed-to-lead automations.
                       </p>
                     </div>
                   </div>
@@ -85,9 +83,9 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                   <div className="step-card" data-r style={delay(4)}>
                     <div className="step-num">2</div>
                     <div className="step-info">
-                      <h3>What we&apos;ll cover during the call</h3>
+                      <h3>Personalized Strategy Response</h3>
                       <p>
-                        We will take a quick look at your current lead flow, database size, and walk through how the automated texting and past-client reactivation campaigns would work for your specific business.
+                        Within one business day, we will email you with concrete recommendations, project timelines, and an invitation for a tailored 1-on-1 walkthrough.
                       </p>
                     </div>
                   </div>
@@ -95,9 +93,9 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                   <div className="step-card" data-r style={delay(5)}>
                     <div className="step-num">3</div>
                     <div className="step-info">
-                      <h3>Zero pressure or hard sell</h3>
+                      <h3>Zero Pressure &amp; Direct Honest Advice</h3>
                       <p>
-                        If Realtor-Go is a genuine match, we will show you setup and migration timelines. If another tool fits your current stage better, we will tell you honestly.
+                        If Realtor-Go and GoHighLevel are a genuine fit for your database, we will share a clear rollout plan. If a different solution fits your immediate stage better, we will tell you straight.
                       </p>
                     </div>
                   </div>
@@ -109,45 +107,39 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                     Back to homepage <ArrowRight />
                   </a>
                   <a className="btn btn-ghost" href="/#inside">
-                    Review CRM features
+                    Explore CRM features
                   </a>
                 </div>
               </div>
 
-              {/* Right Column: Sticky Meeting Card */}
+              {/* Right Column: Sticky Summary Card */}
               <aside className="confirmation-summary-card" data-r style={delay(3)}>
                 <div className="summary-card-header">
-                  <span className="card-tag">Call Details</span>
-                  <h3>20-minute Fit Call</h3>
-                  <p>1-on-1 CRM strategy &amp; workflow review</p>
+                  <span className="card-tag">Submission Summary</span>
+                  <h3>Project Inquiry</h3>
+                  <p>1-on-1 CRM strategy &amp; workflow design</p>
                 </div>
 
                 <div className="summary-details">
-                  <div className="detail-row">
-                    <div className="detail-icon" aria-hidden="true">
-                      <Calendar />
+                  {service && (
+                    <div className="detail-row">
+                      <div className="detail-icon" aria-hidden="true">
+                        <Star />
+                      </div>
+                      <div className="detail-text">
+                        <strong>Service Requested</strong>
+                        <span>{service}</span>
+                      </div>
                     </div>
-                    <div className="detail-text">
-                      <strong>When</strong>
-                      <span>
-                        {date ? (
-                          <>
-                            {date} {time ? `at ${time}` : ""}
-                          </>
-                        ) : (
-                          "At the time selected in the calendar"
-                        )}
-                      </span>
-                    </div>
-                  </div>
+                  )}
 
                   <div className="detail-row">
                     <div className="detail-icon" aria-hidden="true">
                       <Inbox />
                     </div>
                     <div className="detail-text">
-                      <strong>Where</strong>
-                      <span>Video meeting link sent to your inbox</span>
+                      <strong>Confirmation Sent To</strong>
+                      <span>{email ? email : "Your provided email inbox"}</span>
                     </div>
                   </div>
 
@@ -156,23 +148,23 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
                       <Shield />
                     </div>
                     <div className="detail-text">
-                      <strong>No commitment</strong>
-                      <span>A straightforward conversation to see if the CRM fits</span>
+                      <strong>Expected Response</strong>
+                      <span>Within 1 business day (Mon–Fri)</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="summary-tip">
-                  <h4>Helpful tip</h4>
+                  <h4>Have database stats handy?</h4>
                   <p>
-                    No preparation is required. If you know roughly how many past clients are in your database or phone, that helps us calculate potential deal recoveries on the call.
+                    If you know roughly how many past leads or contacts sit inactive in your spreadsheets or current CRM, feel free to reply directly to our confirmation email so we can prepare revenue projections.
                   </p>
                 </div>
 
                 <div className="summary-footer">
-                  <span>Need to reschedule or add a team member?</span>
+                  <span>Need immediate assistance or have urgent questions?</span>
                   <span>
-                    Reply directly to your calendar invite or email{" "}
+                    Email us directly at{" "}
                     <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
                   </span>
                 </div>
