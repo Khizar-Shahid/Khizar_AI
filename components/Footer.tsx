@@ -1,5 +1,15 @@
 import Logo from "./Logo";
 import { SITE } from "./site";
+import { LinkedIn, Instagram, Facebook, XTwitter, TikTok, YouTube } from "./Icons";
+
+const socialLinks = [
+  { href: SITE.socials.linkedin, label: "LinkedIn", Icon: LinkedIn },
+  { href: SITE.socials.instagram, label: "Instagram", Icon: Instagram },
+  { href: SITE.socials.facebook, label: "Facebook", Icon: Facebook },
+  { href: SITE.socials.x, label: "X", Icon: XTwitter },
+  { href: SITE.socials.tiktok, label: "TikTok", Icon: TikTok },
+  { href: SITE.socials.youtube, label: "YouTube", Icon: YouTube },
+];
 
 export default function Footer() {
   return (
@@ -20,6 +30,13 @@ export default function Footer() {
             <a href="/#faq">FAQ</a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </nav>
+          <div className="foot-socials">
+            {socialLinks.map(({ href, label, Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                <Icon />
+              </a>
+            ))}
+          </div>
         </div>
         <div className="foot-fine">
           <span>© {new Date().getFullYear()} Realtor-Go. Runs on HighLevel. Not affiliated with HighLevel, NAR, ICE or any CRM named on this page.</span>

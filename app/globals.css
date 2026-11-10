@@ -2680,6 +2680,33 @@ footer.foot {
   color: inherit
 }
 
+.foot-socials {
+  display: flex;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+.foot-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--fg-dim);
+  transition: color .2s, background .2s;
+}
+
+.foot-socials a:hover {
+  color: var(--fg);
+  background: rgba(255,255,255,.08);
+}
+
+.foot-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* scroll reveal: content is only hidden once the script has confirmed it is running */
 html[data-reveal] [data-r] {
   opacity: 0;
