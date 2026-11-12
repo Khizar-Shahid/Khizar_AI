@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function FreeResourcesPage() {
   return (
-    <div className="contact-page-wrapper">
+    <div className="contact-page-wrapper grid-page">
       <Header theme="dark" />
       <main className="contact-main">
         <div className="contact-wireframe-grid">

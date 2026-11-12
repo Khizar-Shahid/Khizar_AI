@@ -32,7 +32,7 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
   const service = searchParams?.service;
 
   return (
-    <div className="contact-page-wrapper">
+    <div className="contact-page-wrapper grid-page">
       <Header theme="dark" />
       <main className="contact-main">
         <div className="contact-wireframe-grid">

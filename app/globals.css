@@ -4652,3 +4652,18 @@ body:has(.contact-main) header.top {
   }
 }
 
+/* Grid background: Free Resources + Contact pages only */
+.grid-page {
+  background-color: #f7f4ec; /* use your site's cream color/variable */
+  background-image:
+    radial-gradient(ellipse 60% 50% at 70% 0%, rgba(214, 224, 90, 0.25), transparent 70%),
+    linear-gradient(to right, rgba(20, 40, 30, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 40, 30, 0.07) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+}
+
+/* Remove the white layers that were covering the grid, on these pages only */
+.grid-page .contact-main,
+.grid-page .contact-wireframe-grid {
+  background: transparent;
+}
