@@ -346,14 +346,16 @@ header.top.open .mark svg {
 }
 
 .topin {
-  max-width: var(--frame);
+  max-width: 1400px;
   margin: 0 auto;
   padding: 14px 24px;
   min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px
+  gap: 28px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mark {
@@ -407,15 +409,19 @@ body:has(.confirmation-band) header.top .logo-img-dark,
 .topnav {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 15px;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 0;
+  gap: 2px 10px;
+  font-size: 14.5px;
   color: var(--fg-dim)
 }
 
 .topnav a:not(.btn) {
   text-decoration: none;
-  padding: 9px 14px;
+  padding: 8px 10px;
   border-radius: 999px;
+  white-space: nowrap;
   transition: color .15s ease, background .15s ease
 }
 
@@ -425,7 +431,8 @@ body:has(.confirmation-band) header.top .logo-img-dark,
 }
 
 .topnav .btn {
-  margin-left: 10px
+  margin-left: 14px;
+  flex: none;
 }
 
 /* Navigation Services Dropdown */
@@ -521,7 +528,7 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
   pointer-events: auto;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1121px) {
 
   .nav-dropdown:hover .nav-dropdown-menu,
   .nav-dropdown-menu:hover {
@@ -665,7 +672,7 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
   height: 22px
 }
 
-@media (max-width:900px) {
+@media (max-width: 1120px) {
   .menu-btn {
     display: grid
   }
@@ -676,8 +683,10 @@ header.top.scrolled .nav-dropdown:hover .nav-dropdown-trigger-row {
     left: 0;
     right: 0;
     top: 100%;
+    flex: none;
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
     gap: 2px;
     padding: 12px 24px 32px;
     background: var(--forest);
@@ -4642,3 +4651,4 @@ body:has(.contact-main) header.top {
     transform: none
   }
 }
+

@@ -26,6 +26,7 @@ export default function Footer() {
             <a href="/#pricing">Pricing</a>
             <a href="/services">Services</a>
             <a href="/blog">Blog</a>
+            <a href="/free-resources">Free Resources</a>
             <a href="/contact">Contact</a>
             <a href="/#faq">FAQ</a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

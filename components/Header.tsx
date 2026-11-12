@@ -218,6 +218,9 @@ export default function Header({ theme }: { theme?: "light" | "dark" }) {
           <a href="/blog" onClick={closeAll}>
             Blog
           </a>
+          <a href="/free-resources" onClick={closeAll}>
+            Free Resources
+          </a>
           <a href="/contact" onClick={closeAll}>
             Contact
           </a>
