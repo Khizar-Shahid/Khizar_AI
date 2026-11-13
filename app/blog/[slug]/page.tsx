@@ -20,6 +20,18 @@ interface PageProps {
 
 export const revalidate = 60; // Fallback ISR revalidation every 60s in addition to instant webhooks
 
+// Reads the real width/height from the Sanity image ID (e.g. image-abc123-1600x900-png)
+// so the cover image can be shown at its true ratio without cropping.
+function getImageDimensions(image: unknown): { width: number; height: number } {
+  const asset = (image as { asset?: { _ref?: string; _id?: string } } | undefined)?.asset;
+  const ref = asset?._ref || asset?._id || '';
+  const match = ref.match(/-(\d+)x(\d+)-/);
+  if (match) {
+    return { width: Number(match[1]), height: Number(match[2]) };
+  }
+  return { width: 1600, height: 900 };
+}
+
 export async function generateStaticParams() {
   try {
     const posts = await client.fetch<{ slug: string }[]>(POST_SLUGS_QUERY);
@@ -115,6 +127,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       : undefined,
   };
 
+  const cover = post.mainImage?.asset ? getImageDimensions(post.mainImage) : null;
+
   return (
     <>
       <script
@@ -191,28 +205,19 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             </header>
 
-            {/* Featured Image */}
-            {post.mainImage?.asset && (
+            {/* Featured Image (shown at its real ratio, not cropped) */}
+            {post.mainImage?.asset && cover && (
               <figure className="blog-article-media">
                 <Image
-                  src={urlForImage(post.mainImage).width(1200).height(675).url()}
+                  src={urlForImage(post.mainImage).width(Math.min(cover.width, 1600)).url()}
                   alt={post.mainImage.alt || post.title}
-                  fill
+                  width={cover.width}
+                  height={cover.height}
                   priority
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 900px) 100vw, 820px"
+                 sizes="(max-width: 960px) 100vw, 920px"
                 />
                 {post.mainImage.caption && (
-                  <figcaption style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    insetInline: 0,
-                    padding: '8px 16px',
-                    background: 'rgba(0,0,0,0.6)',
-                    color: '#fff',
-                    fontSize: '12px',
-                    textAlign: 'center'
-                  }}>
+                  <figcaption className="blog-article-caption">
                     {post.mainImage.caption}
                   </figcaption>
                 )}
