@@ -16,6 +16,11 @@ const serviceCategories = [
         desc: "Agents, teams and brokerages",
       },
       {
+        href: "/services/best-crm-for-realtors",
+        label: "Best CRM for Realtors",
+        desc: "Solutions & comparison guide",
+      },
+      {
         href: "/services/mortgage-crm-setup",
         label: "Mortgage CRM Setup",
         desc: "Brokers and loan officers",
@@ -40,6 +45,11 @@ const serviceCategories = [
   {
     category: "Automations",
     items: [
+      {
+        href: "/services/real-estate-agent-leads",
+        label: "Real Estate Agent Leads",
+        desc: "Capture, nurture & convert leads",
+      },
       {
         href: "/services/crm-workflow-automation",
         label: "CRM Workflow Automation",
