@@ -11,6 +11,7 @@ import { urlForImage } from '@/sanity/lib/image';
 import { CustomPortableText } from '@/sanity/components/PortableText';
 import type { Post } from '@/sanity/lib/types';
 import { SITE } from '@/components/site';
+import { BASE_URL } from '@/lib/services-data';
 
 interface PageProps {
   params: {
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = post.seo?.metaTitle || `${post.title} | Realtor-Go Blog`;
   const description = post.seo?.metaDescription || post.excerpt || post.title;
-  const canonicalUrl = `https://realtor-go.com/blog/${post.slug}`;
+  const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
   const ogImage = post.mainImage?.asset
     ? urlForImage(post.mainImage).width(1200).height(630).url()
     : undefined;
@@ -67,7 +68,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title,
       description,
-      url: canonicalUrl,
+      url: `https://realtor-go.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.publishedAt,
       authors: post.author ? [post.author] : undefined,

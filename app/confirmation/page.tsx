@@ -4,13 +4,14 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import { ArrowRight, Check, Inbox, Shield, Star } from "@/components/Icons";
 import { SITE, delay } from "@/components/site";
+import { BASE_URL } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   title: "Inquiry Received & Confirmed | Realtor-Go",
   description:
     "Thank you for contacting Realtor-Go. Our team has received your message and will review your requirements within one business day.",
   alternates: {
-    canonical: "/confirmation",
+    canonical: `${BASE_URL}/confirmation`,
   },
   robots: {
     index: false,

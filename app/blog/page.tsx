@@ -9,13 +9,14 @@ import { POSTS_QUERY } from '@/sanity/lib/queries';
 import { urlForImage } from '@/sanity/lib/image';
 import type { Post } from '@/sanity/lib/types';
 import { delay } from '@/components/site';
+import { BASE_URL } from '@/lib/services-data';
 
 export const metadata: Metadata = {
   title: 'Blog & CRM Insights | Realtor-Go',
   description:
     'Actionable CRM setup guides, GoHighLevel automation strategies, and pipeline workflows for real estate agents and mortgage loan officers.',
   alternates: {
-    canonical: 'https://realtor-go.com/blog',
+    canonical: `${BASE_URL}/blog`,
   },
   openGraph: {
     title: 'Blog & CRM Insights | Realtor-Go',

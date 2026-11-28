@@ -1042,100 +1042,141 @@ export const SERVICES_LIST: ServiceItem[] = [
     metaDescription:
       "Discover the best CRM solutions for realtors and real estate agents. Compare features, lead management, automation, and follow-up tools.",
     category: "CRM Setup",
-    audience: "Solo Agents, High-Producing Teams & Independent Brokerages",
+    audience: "Solo Realtors, High-Producing Teams & Independent Brokerages",
     badge: "Realtor CRM Guide & Architecture",
     lede:
-      "Choosing the best CRM for realtors can make the difference between lost inquiries and consistent commissions. Discover the top CRM for real estate, compare essential features, and see how tailored CRM software for real estate agents helps you capture, nurture, and close more clients.\n\nWhether you need an all-in-one agent CRM or advanced CRM tools for real estate teams, having the right CRM system for realtors ensures your database generates predictable revenue month after month.",
+      "Managing leads, following up with clients, and organizing property inquiries can take a lot of time. The right CRM for real estate agents makes these tasks easier.\n\nRealtor-Go provides customized real estate CRM solutions to help agents manage contacts, organize leads, automate follow-ups, and improve their sales process. Whether you are a solo realtor or manage a real estate team, we help you build a CRM system that fits your business needs.",
     problemStatement: {
-      headline: "Most Realtors Struggle With Overcomplicated or Underpowered CRM Programs",
+      headline: "Real Estate CRM Solutions for Your Business",
       description:
-        "Real estate agents frequently switch between CRM programs for realtors, searching for a platform that balances ease of use with robust automation. Too many systems require hours of manual data entry, offer generic templates that clients ignore, or fail to connect with lead sources like Zillow, Realtor.com, and Meta ads.\n\nThe best CRM for real estate should work quietly in the background—organizing contacts, automating multi-channel follow-ups, and alerting you the second a prospective buyer or seller is ready to talk. When your CRM for real estate agents is configured correctly, speed-to-lead increases and fewer opportunities slip through the cracks.",
-      stats: { value: "70%", label: "Of leads choose the first real estate agent who replies within 5 minutes" },
+        "Keep your real estate business organized with a CRM system designed around your daily activities. Spend less time on manual tasks and more time building client relationships.\n\nOur real estate CRM setup services help you manage buyer and seller leads, organize contacts, automate email and SMS follow-ups, track sales pipelines, and schedule appointments and reminders with ease.",
+      stats: { value: "100%", label: "Customized CRM setup tailored to your daily sales process" },
     },
     deliverablesHead: {
-      headline: "Essential Features of the Top CRM Systems for Real Estate",
+      headline: "Our Real Estate CRM Setup Services",
       subheadline:
-        "The best CRM solutions combine intuitive contact organization with intelligent automation. Here is what modern real estate professionals look for in a top-performing agent CRM.",
+        "Choosing the right CRM is important, but proper setup makes the real difference. At Realtor-Go, we help real estate professionals build organized and easy-to-use CRM systems.",
     },
     deliverables: [
       {
-        title: "Multi-Source Lead Capture & Instant Routing",
+        title: "Real Estate Lead Management",
         description:
-          "A good CRM for realtors captures incoming buyer and seller leads instantly from any channel and assigns them immediately.",
+          "Manage all your leads in one place. Organize buyer inquiries, seller contacts, and potential clients so you can easily track every opportunity.",
         badge: "Lead Management",
         bullets: [
-          "Native integrations with Zillow, Realtor.com, Google LSA, and Meta ads",
-          "Sub-minute automated text and email speed-to-lead responses",
-          "Round-robin lead assignment for solo agents and expanding teams",
+          "Centralized database for buyer inquiries and seller contacts",
+          "Easily track every opportunity and communication history",
+          "Keep client information and property notes organized",
         ],
       },
       {
-        title: "Automated Follow-Up & Long-Term Nurture",
+        title: "GoHighLevel CRM Setup",
         description:
-          "The best CRM programs for realtors nurture prospects across weeks and months without requiring manual check-ins.",
-        badge: "Communication",
+          "We provide GoHighLevel CRM setup for real estate agents who want to manage contacts, leads, appointments, and marketing activities through one platform.",
+        badge: "All-in-One Platform",
         bullets: [
-          "Conversational SMS and email drip campaigns that stop on reply",
-          "Missed-call text-back so you never lose callers while in client showings",
-          "365-day buyer and seller nurture sequences for long-term prospects",
+          "Turnkey GoHighLevel real estate architecture configured for you",
+          "Unified inbox for two-way SMS, email, and call tracking",
+          "Marketing and appointment scheduling all in one system",
         ],
       },
       {
-        title: "Visual Pipelines & Transaction Stages",
+        title: "Automated Email and SMS Follow-Ups",
         description:
-          "A proven CRM system for realtors provides clear visual pipeline stages from first inquiry to closed deal and referrals.",
+          "Set up automatic messages for new leads, appointment reminders, and follow-up campaigns to stay connected with potential clients.",
+        badge: "Smart Automation",
+        bullets: [
+          "Instant speed-to-lead auto-responses for new inquiries",
+          "Automated consultation and appointment reminders",
+          "Consistent follow-up campaigns to stay top of mind",
+        ],
+      },
+      {
+        title: "Custom Sales Pipelines",
+        description:
+          "Create separate buyer and seller pipelines to track leads from the first inquiry to the final deal.",
         badge: "Pipeline Control",
         bullets: [
-          "Distinct pipeline workflows for Buyers, Listings/Sellers, and Past Clients",
-          "Automated milestone notifications to lenders, title reps, and clients",
-          "Custom tags and smart search filters for daily prospecting priorities",
+          "Separate pipelines for buyer leads and seller listings",
+          "Visual deal stages from initial contact to closing",
+          "Stage-triggered notifications and task assignments",
         ],
       },
       {
-        title: "Calendar Booking & Review Automation",
+        title: "CRM Workflow Automation",
         description:
-          "Modern CRM software for real estate agents eliminates scheduling friction and helps build online local reputation.",
-        badge: "Productivity",
+          "Automate lead notifications, contact assignments, follow-up tasks, and other repetitive activities to save time.",
+        badge: "Efficiency",
         bullets: [
-          "Self-booking consultation links with automated SMS and email reminders",
-          "Two-way synchronization with Google Calendar and Microsoft Outlook",
-          "Post-closing automated 5-star Google review campaigns",
+          "Automated lead routing and agent assignment",
+          "Task creation and reminders for important deal dates",
+          "Frees up hours every week from manual administration",
+        ],
+      },
+      {
+        title: "CRM Integration and Customization",
+        description:
+          "Connect supported websites, lead forms, calendars, and marketing tools with your CRM. Customize fields and workflows according to your business needs.",
+        badge: "Customization",
+        bullets: [
+          "Connect website forms, ad channels, and lead sources",
+          "Two-way calendar syncing with Google Calendar and Outlook",
+          "Custom contact fields and tags tailored to your team",
         ],
       },
     ],
     pipelineStages: [
-      { name: "Lead Evaluation", action: "Identify workflow bottlenecks and select the right CRM architecture", delay: "Step 01" },
-      { name: "Pipeline Design", action: "Build buyer, seller, and referral stages mapped to your business", delay: "Step 02" },
-      { name: "Follow-Up Automation", action: "Configure speed-to-lead texts, email drips, and missed-call responses", delay: "Step 03" },
-      { name: "Lead Source Integration", action: "Connect website forms, ad accounts, and real estate portals via API", delay: "Step 04" },
-      { name: "Compliance & Testing", action: "Complete A2P 10DLC vetting and run end-to-end transaction tests", delay: "Step 05" },
-      { name: "Live Launch & Training", action: "Deploy active CRM system with team walkthrough and ongoing support", delay: "Step 06" },
+      { name: "Business Review", action: "We understand your business, team, and lead management needs.", delay: "Step 01" },
+      { name: "CRM Planning", action: "We plan your pipelines, contacts, and workflows.", delay: "Step 02" },
+      { name: "CRM Configuration", action: "We set up and customize your CRM.", delay: "Step 03" },
+      { name: "Automation Setup", action: "We configure email, SMS, and follow-up workflows.", delay: "Step 04" },
+      { name: "Testing and Launch", action: "We test the system and prepare it for daily use.", delay: "Step 05" },
     ],
     faqs: [
       {
-        question: "What is the best CRM for realtors and real estate agents?",
+        question: "What is the best CRM for realtors?",
         answer:
-          "The best CRM for realtors depends on your business model. GoHighLevel offers automation, all-in-one messaging, and pipeline customization. Follow Up Boss and kvCORE are also popular options, though GoHighLevel provides greater flexibility and eliminates per-user fees when managed through a setup partner.",
+          "The best CRM for realtors is one that helps manage leads, organize contacts, track sales activities, and automate follow-ups. The right solution depends on your business size, budget, and daily requirements. Realtor-Go helps configure CRM systems around your real estate business needs.",
       },
       {
-        question: "What features should a good CRM for real estate include?",
+        question: "Why do real estate agents need a CRM?",
         answer:
-          "A comprehensive real estate CRM should include multi-channel lead capture, sub-minute automated follow-ups, visual buyer and seller pipelines, calendar booking with reminders, two-way SMS and calling, and past-client review campaigns.",
+          "Real estate agents need a CRM to manage buyer and seller leads, save client information, track conversations, schedule appointments, and follow up with potential customers. It helps keep business activities organized.",
       },
       {
-        question: "How do CRM programs for realtors help with lead conversion?",
+        question: "Does Realtor-Go provide GoHighLevel CRM setup?",
         answer:
-          "CRM programs for realtors improve conversion by responding to new inquiries instantly, keeping long-term prospects engaged through automated drips, and ensuring no lead is forgotten through automated tasks and pipeline reminders.",
+          "Yes. Realtor-Go provides GoHighLevel CRM setup for real estate agents and teams. Services can include contact management, sales pipelines, lead capture, email and SMS automation, appointment booking, and workflow configuration.",
       },
       {
-        question: "Can an agent CRM integrate with real estate lead portals like Zillow?",
+        question: "Can you automate real estate lead follow-ups?",
         answer:
-          "Yes. High-quality CRM software for real estate agents integrates directly with Zillow Premier Agent, Realtor.com, Meta ads, Google LSA, and custom website forms via native API webhooks.",
+          "Yes. We can configure automated email and SMS follow-ups based on lead actions and your business requirements. This helps you stay connected with potential buyers and sellers.",
       },
       {
-        question: "How long does it take to set up a real estate CRM system?",
+        question: "Can you set up separate buyer and seller pipelines?",
         answer:
-          "A professional, done-for-you CRM setup typically takes 10 to 14 business days, including pipeline configuration, follow-up automations, portal integrations, 10DLC carrier compliance, and complete end-to-end testing.",
+          "Yes. We can create separate pipelines for buyers and sellers so you can track each lead according to its stage in your sales process.",
+      },
+      {
+        question: "Can you connect my website with my real estate CRM?",
+        answer:
+          "Yes. We can connect supported website forms and lead capture tools to your CRM so new inquiries can be added to your contact database automatically.",
+      },
+      {
+        question: "Is GoHighLevel suitable for real estate agents?",
+        answer:
+          "GoHighLevel can be a useful option for real estate agents who want contact management, lead pipelines, appointment scheduling, and marketing automation in one platform. Its features can be customized according to your business needs.",
+      },
+      {
+        question: "How long does real estate CRM setup take?",
+        answer:
+          "The timeline depends on your requirements, CRM platform, integrations, and number of workflows. A basic setup can take less time, while a customized CRM with multiple automations may require more work.",
+      },
+      {
+        question: "Can Realtor-Go customize my existing CRM?",
+        answer:
+          "Yes. We can review your existing CRM setup and help improve its pipelines, contact organization, automations, integrations, and lead management process.",
       },
     ],
     relatedSlugs: ["real-estate-crm-setup", "gohighlevel-real-estate-crm-setup", "real-estate-lead-follow-up-automation", "crm-workflow-automation"],
@@ -1152,97 +1193,113 @@ export const SERVICES_LIST: ServiceItem[] = [
     audience: "Solo Agents, High-Producing Teams & ISAs",
     badge: "Lead Generation & Conversion",
     lede:
-      "Consistently generating real estate agent leads is the lifeblood of a growing brokerage or production team. Without a predictable lead generation and automated follow-up system, agents experience feast-or-famine cycles that hold back revenue growth.\n\nLearn how modern agents capture high-intent buyer and seller leads across multiple channels, automate immediate speed-to-lead responses, and systematically nurture prospects into closed transactions.",
+      "Getting consistent real estate agent leads is important for growing your business. But finding potential buyers and sellers is only the first step. You also need a reliable system to capture inquiries, follow up quickly, and turn prospects into clients.\n\nRealtor-Go helps real estate agents and teams build a complete lead generation and follow-up system. We help you capture leads from different channels, automate communication, and manage every opportunity in one place.",
     problemStatement: {
-      headline: "Most Real Estate Agents Struggle with Inconsistent Inquiries and Missed Opportunities",
+      headline: "Why Choose Realtor-Go for Real Estate Leads?",
       description:
-        "Generating real estate agent leads requires more than buying expensive portal contacts or waiting for sporadic word-of-mouth referrals. When inquiries arrive across fragmented channels like Zillow, social media ads, and open house sheets, slow response times cause valuable prospects to contact competing agents.\n\nTo build a scalable real estate business, agents need a streamlined system that automatically captures incoming leads, initiates sub-minute follow-up conversations, and maintains consistent long-term touchpoints until buyers and sellers are ready to transact.",
-      stats: { value: "70%", label: "Of leads choose the first agent who replies within 5 minutes" },
+        "Realtor-Go helps real estate agents build a better system for lead generation and management. Generating inquiries is important, but managing and following up with them makes the real difference.\n\nWe support real estate professionals across the USA and Canada with practical CRM and lead management solutions—featuring customized workflows, smart automation, better lead organization, faster response times, and clear pipeline tracking.",
+      stats: { value: "100%", label: "Lead capture & automated follow-up systems across the USA and Canada" },
     },
     deliverablesHead: {
-      headline: "A Complete System to Capture, Nurture & Convert Real Estate Agent Leads",
+      headline: "Real Estate Lead Generation Services",
       subheadline:
-        "Turn online inquiries and property interest into signed listings and active buyer consultations with automated lead capture and follow-up infrastructure.",
+        "We help real estate professionals manage the complete lead journey, from the first inquiry to the final deal.",
     },
     deliverables: [
       {
-        title: "Multi-Channel Lead Capture Architecture",
+        title: "Multi-Channel Lead Capture",
         description:
-          "Capture every inbound inquiry instantly from Meta Ads, Google LSA, website landing pages, and property portals.",
-        badge: "Inbound Capture",
+          "Capture new real estate leads from Facebook Ads, Google Ads, website forms, landing pages, and supported property portals. Bring your inquiries into one organized system.",
+        badge: "Lead Capture",
         bullets: [
-          "Direct webhook integrations with Facebook Lead Ads and Google PPC campaigns",
-          "Home valuation landing pages and buyer guide funnels that capture verified contact details",
-          "Centralized lead routing that eliminates manual entry and lost contacts",
+          "Direct integrations with Facebook Lead Ads and Google Ads",
+          "Custom landing pages and website inquiry capture",
+          "Centralize incoming leads from property portals into one CRM",
         ],
       },
       {
-        title: "Sub-Minute Speed-to-Lead Follow-Up",
+        title: "Fast Lead Follow-Up",
         description:
-          "Respond to new real estate agent leads within 60 seconds using conversational SMS and automated phone connection.",
-        badge: "Fast Response",
+          "Respond to new inquiries quickly with automated SMS, email messages, and notifications. Make sure potential buyers and sellers receive timely attention.",
+        badge: "Speed-to-Lead",
         bullets: [
-          "Automated conversational text messages asking prospect buying or selling timelines",
-          "Missed-call text-back that immediately engages incoming callers during showings",
-          "Round-robin team routing so the first available agent can claim and call warm prospects",
+          "Instant automated SMS and email auto-replies under 60 seconds",
+          "Immediate agent alerts on mobile so you never miss warm leads",
+          "Missed-call text-back to engage callers even during showings",
         ],
       },
       {
-        title: "365-Day Automated Lead Nurturing",
+        title: "Automated Lead Nurturing",
         description:
-          "Keep long-term prospects engaged with automated email cadences, market updates, and property alerts.",
+          "Not every lead is ready to buy or sell immediately. Our automated follow-up workflows help you stay connected with prospects through regular messages and updates.",
         badge: "Long-Term Nurture",
         bullets: [
-          "Automated monthly market pulse emails showcasing local neighborhood sales data",
-          "Low-pressure re-engagement texts for leads who went dark 30, 60, or 90 days ago",
-          "Holiday and birthday touchpoints that keep your brand top of mind effortlessly",
+          "Automated follow-up campaigns based on buyer/seller timelines",
+          "Consistent check-ins, local market updates, and property news",
+          "Re-engage cold or unresponsive inquiries automatically",
         ],
       },
       {
-        title: "Lead Tracking & Pipeline Analytics",
+        title: "Buyer and Seller Lead Management",
         description:
-          "Track lead sources, conversion rates, and agent response times to maximize ROI on marketing spend.",
-        badge: "Pipeline Visibility",
+          "Organize buyer and seller leads into separate pipelines. Track conversations, property interests, follow-up activities, and deal progress.",
+        badge: "Pipeline Organization",
         bullets: [
-          "Visual buyer and seller pipelines showing exact deal stages from lead to close",
-          "Attribution tags that identify which ad campaigns and lead portals yield closings",
-          "Automated task reminders so no warm prospect is ever forgotten",
+          "Distinct pipelines for buyer inquiries and seller listings",
+          "Track conversation history and property preferences",
+          "Clear visibility over every stage of the transaction",
+        ],
+      },
+      {
+        title: "CRM Automation and Lead Tracking",
+        description:
+          "Manage your leads through a customized CRM system. Track lead sources, assign contacts to agents, create follow-up tasks, and monitor your sales pipeline.",
+        badge: "Tracking & Automation",
+        bullets: [
+          "Track marketing ROI and lead source performance",
+          "Round-robin lead assignment for solo agents and teams",
+          "Automated task reminders for client milestones and follow-ups",
         ],
       },
     ],
     pipelineStages: [
-      { name: "Lead Inbound Capture", action: "Lead submitted via ad or portal; tagged by source in CRM", delay: "0 min" },
-      { name: "Sub-Minute Auto-Reply", action: "Conversational SMS & email sent with booking link", delay: "< 1 min" },
-      { name: "Discovery Call Booked", action: "Calendar appointment confirmed with SMS reminder sequence", delay: "Instant" },
-      { name: "Active Showing / Listing Prep", action: "Agent conducts consultation; milestone updates tracked", delay: "Day 1-7" },
-      { name: "Under Contract / Escrow", action: "Milestone alerts sent to buyer, seller, lender, and title", delay: "Milestones" },
-      { name: "Closed & Referral Nurture", action: "Review request sent + annual anniversary nurture activated", delay: "+30 days" },
+      { name: "Capture Leads", action: "Collect inquiries from your website, ads, and other supported channels.", delay: "Step 01" },
+      { name: "Automatic Response", action: "Send instant SMS and email responses to new prospects.", delay: "Step 02" },
+      { name: "Lead Qualification", action: "Organize leads based on their interests and buying or selling timelines.", delay: "Step 03" },
+      { name: "Follow-Up", action: "Keep potential clients engaged with automated communication.", delay: "Step 04" },
+      { name: "Track Opportunities", action: "Monitor leads through your buyer and seller pipelines.", delay: "Step 05" },
+      { name: "Nurture Clients", action: "Stay connected with prospects and past clients for future opportunities.", delay: "Step 06" },
     ],
     faqs: [
       {
+        question: "How can real estate agents generate more leads?",
+        answer:
+          "Real estate agents can generate leads through Google Ads, Facebook Ads, website forms, property portals, referrals, and local marketing. A proper follow-up system helps manage these opportunities.",
+      },
+      {
         question: "What are the best sources for real estate agent leads?",
         answer:
-          "The most effective lead sources combine inbound digital channels (such as Google Local Services Ads, Meta Lead Ads, and home valuation pages) with organic sphere marketing, open house registrations, and past-client referrals.",
+          "Popular sources include Facebook Ads, Google Ads, website landing pages, property portals, open houses, and client referrals.",
       },
       {
-        question: "How fast should real estate agents follow up with new leads?",
+        question: "How can I follow up with real estate leads automatically?",
         answer:
-          "Studies show that contacting leads within the first 5 minutes increases conversion rates by up to 391%. Automated speed-to-lead text messaging ensures every prospect receives an immediate response even when agents are in showings or meetings.",
+          "You can use CRM automation to send SMS messages, emails, appointment reminders, and follow-up campaigns based on lead activity.",
       },
       {
-        question: "How does CRM automation help real estate lead conversion?",
+        question: "Can Realtor-Go help manage buyer and seller leads?",
         answer:
-          "A customized real estate CRM automatically routes inquiries, triggers personalized text and email sequences, notifies agents on their mobile devices, and schedules appointments without manual data entry.",
+          "Yes. We help set up separate buyer and seller pipelines to organize inquiries, track progress, and manage follow-ups.",
       },
       {
-        question: "What is database reactivation for real estate leads?",
+        question: "Does Realtor-Go provide real estate lead generation services?",
         answer:
-          "Database reactivation is an automated campaign that reaches out to older, uncontacted leads in your database with simple, low-pressure questions. It frequently uncovers motivated buyers and sellers without spending additional advertising dollars.",
+          "Realtor-Go helps build lead capture, CRM, and automated follow-up systems for real estate professionals. These systems help manage incoming inquiries and improve the lead conversion process.",
       },
       {
-        question: "Can I manage buyer and seller leads in separate pipelines?",
+        question: "Why is fast lead response important?",
         answer:
-          "Yes. A well-configured CRM provides distinct pipeline stages for buyers, sellers, under-contract deals, and past clients, allowing you to tailor communications and track progress accurately.",
+          "Quick responses help you connect with potential buyers and sellers while they are still interested. Automated notifications and messages can help reduce delays.",
       },
     ],
     relatedSlugs: ["real-estate-crm-setup", "gohighlevel-real-estate-crm-setup", "real-estate-lead-follow-up-automation", "crm-workflow-automation"],
